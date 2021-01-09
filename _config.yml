@@ -3,7 +3,7 @@ logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   First description
   <br><br>
-  Second description
+  <a href="https://portfolio.hsuweni.info/mysql-doc/" target="_blank">匯出 MySQL 資料表說明成為 word 文件</a>
   <br><br>
-  <a href="https://www.linkedin.com/in/weni-hsu-88251777/">View My LinkedIn Profile</a>
+  <a href="https://www.linkedin.com/in/weni-hsu-88251777/" target="_blank">View My LinkedIn Profile</a>
 theme: jekyll-theme-minimal
