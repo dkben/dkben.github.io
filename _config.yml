@@ -1,1 +1,9 @@
+title: Hsu WenI Portfolio
+logo: "/images/logo.png?raw=true" # your photo (or logo) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  First description
+  <br><br>
+  Second description
+  <br><br>
+  <a href="https://www.linkedin.com/in/weni-hsu-88251777/">View My LinkedIn Profile</a>
 theme: jekyll-theme-cayman
