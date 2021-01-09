@@ -6,4 +6,4 @@ description: > # your text below (remove <br> elements if you don't need line br
   Second description
   <br><br>
   <a href="https://www.linkedin.com/in/weni-hsu-88251777/">View My LinkedIn Profile</a>
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
