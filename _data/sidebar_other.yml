@@ -1,6 +1,9 @@
 - name: My Learning Methods
-  link: /other_my_learning_methods
+  link: /other_my_learning_methods.html
+  target: _self
 - name: A Day in the Life of a Web Developer
-  link: /other_web_developer
+  link: /other_web_developer.html
+  target: _self
 - name: About Me
-  link: /other_about
+  link: /other_about.html
+  target: _self

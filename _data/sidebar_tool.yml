@@ -1,10 +1,15 @@
 - name: 比對2個資料庫
   link: https://github.com/dkben/diff-db
+  target: _blank
 - name: 匯出MySQL資料表資訊
   link: https://github.com/dkben/mysql-doc
+  target: _blank
 - name: 置換一個資料庫所有資料表資料
   link: https://github.com/dkben/change-sql-all-table-row-column-string
+  target: _blank
 - name: PHP上傳Excel依照條件判斷寫入DB
   link: https://github.com/dkben/excel-to-db
+  target: _blank
 - name: 使用python透過csv裡的url來抓圖片
   link: https://github.com/dkben/get-photos-from-csv-url
+  target: _blank

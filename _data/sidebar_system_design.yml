@@ -1,6 +1,9 @@
 - name: Slack機器人
   link: /
+  target: _self
 - name: 更新多台遠端主機及比對
   link: /
+  target: _self
 - name: Raspberry Pi Server
   link: /
+  target: _self
