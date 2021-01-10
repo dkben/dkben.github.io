@@ -4,6 +4,9 @@
 - name: A Day in the Life of a Web Developer
   link: /other_web_developer.html
   target: _self
+- name: 工作經歷
+  link: /timeline.html
+  target: _self
 - name: About Me
   link: /other_about.html
   target: _self
