@@ -1,0 +1,81 @@
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="inner">
+
+        <!-- Menu -->
+        <nav id="menu">
+            <header class="major">
+                <h2>Menu</h2>
+            </header>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li>
+                    <span class="opener">Portfolio</span>
+                    <ul>
+                        {% for item in site.data.sidebar_portfolio %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <span class="opener">Tool</span>
+                    <ul>
+                        {% for item in site.data.sidebar_tool %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %} target="_blank">{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <span class="opener">Integrations</span>
+                    <ul>
+                        {% for item in site.data.sidebar_integrations %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <span class="opener">System Design</span>
+                    <ul>
+                        {% for item in site.data.sidebar_system_design %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <span class="opener">Linux</span>
+                    <ul>
+                        {% for item in site.data.sidebar_linux %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <span class="opener">Other</span>
+                    <ul>
+                        {% for item in site.data.sidebar_other %}
+                        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Section -->
+        <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <p>如果你對我展示的作品有興趣，歡迎與我聯絡</p>
+            <ul class="contact">
+                <li class="icon solid fa-envelope"><a href="mailto:hsu.weni@gmail.com" target="_blank">hsu.weni@gmail.com</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>.
+                Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
+</div>
