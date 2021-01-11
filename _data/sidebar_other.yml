@@ -1,3 +1,6 @@
+- name: A list of skills
+  link: /a_list_of_skills.html
+  target: _self
 - name: My Learning Methods
   link: /other_my_learning_methods.html
   target: _self
