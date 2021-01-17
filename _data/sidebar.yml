@@ -1,0 +1,76 @@
+toc:
+  - title: Portfolio
+    subfolderitems:
+      - name: 影音網站系統
+        link: /
+        target: _self
+      - name: 進銷存系統
+        link: /
+        target: _self
+      - name: 拍賣系統
+        link: /
+        target: _self
+      - name: 架站平台系統
+        link: /
+        target: _self
+      - name: 給日本人的中文學習網站
+        link: https://www.yukiyuki.club/
+        target: _blank
+  - title: Tool
+    subfolderitems:
+      - name: 比對2個資料庫
+        link: https://github.com/dkben/diff-db
+        target: _blank
+      - name: 匯出MySQL資料表資訊
+        link: https://github.com/dkben/mysql-doc
+        target: _blank
+      - name: 置換一個資料庫所有資料表資料
+        link: https://github.com/dkben/change-sql-all-table-row-column-string
+        target: _blank
+      - name: PHP上傳Excel依照條件判斷寫入DB
+        link: https://github.com/dkben/excel-to-db
+        target: _blank
+      - name: 使用python透過csv裡的url來抓圖片
+        link: https://github.com/dkben/get-photos-from-csv-url
+        target: _blank
+  - title: Integrations
+    subfolderitems:
+      - name: 分散式檔案系統及驗證方法
+        link: /
+        target: _self
+  - title: System Design
+    subfolderitems:
+      - name: Slack機器人
+        link: /
+        target: _self
+      - name: 更新多台遠端主機及比對
+        link: /
+        target: _self
+      - name: Raspberry Pi Server
+        link: /
+        target: _self
+  - title: Linux
+    subfolderitems:
+      - name: 頻寬合併
+        link: /
+        target: _self
+      - name: Linux KVM
+        link: /
+        target: _self
+  - title: Other
+    subfolderitems:
+      - name: A list of skills
+        link: /a_list_of_skills.html
+        target: _self
+      - name: My Learning Methods
+        link: /other_my_learning_methods.html
+        target: _self
+      - name: A Day in the Life of a Web Developer
+        link: /other_web_developer.html
+        target: _self
+      - name: 工作經歷
+        link: /timeline.html
+        target: _self
+      - name: About Me
+        link: /other_about.html
+        target: _self

@@ -9,69 +9,22 @@
             </header>
             <ul>
                 <li class="{{ page.class }}"><a href="index.html">Homepage</a></li>
+                {% for item in site.data.sidebar.toc %}
                 <li>
-                    <span class="opener">Portfolio</span>
+<!--                    <span class="opener-->
+<!--{% for entry in item.subfolderitems %}-->
+<!--    {% if page.url == entry.link %}active{% endif %}-->
+<!--{% endfor %}">{{ item.title }}</span>-->
+                    <span class="opener">{{ item.title }}</span>
                     <ul>
-                        {% for item in site.data.sidebar_portfolio %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
+                        {% for entry in item.subfolderitems %}
+                        <li class="{% if page.url== entry.link %}current{% endif %}">
+                            <a href="{{ entry.link }}" target="{{ entry.target }}">{{ entry.name }}</a>
                         </li>
                         {% endfor %}
                     </ul>
                 </li>
-                <li>
-                    <span class="opener">Tool</span>
-                    <ul>
-                        {% for item in site.data.sidebar_tool %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li>
-                    <span class="opener">Integrations</span>
-                    <ul>
-                        {% for item in site.data.sidebar_integrations %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li>
-                    <span class="opener">System Design</span>
-                    <ul>
-                        {% for item in site.data.sidebar_system_design %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li>
-                    <span class="opener">Linux</span>
-                    <ul>
-                        {% for item in site.data.sidebar_linux %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li>
-                    <span class="opener
-{% for item in site.data.sidebar_other %}
-{% if page.url == item.link %}active{% endif %}
-{% endfor %}">Other</span>
-                    <ul>
-                        {% for item in site.data.sidebar_other %}
-                        <li {% if page.url == item.link %}class="current"{% endif %}>
-                            <a href="{{ item.link }}" target="{{ item.target }}">{{ item.name }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
+                {% endfor %}
             </ul>
         </nav>
 
@@ -82,9 +35,12 @@
             </header>
             <p>如果你對我展示的作品有興趣，歡迎與我聯絡</p>
             <ul class="contact">
-                <li class="icon solid fa-envelope"><a href="mailto:hsu.weni@gmail.com" target="_blank">hsu.weni@gmail.com</a></li>
-                <li class="icon solid fa-info-circle"><a href="https://www.linkedin.com/in/weni-hsu-88251777/" target="_blank">View My LinkedIn Profile</a></li>
-                <li class="icon solid fa fa-sitemap"><a href="https://github.com/dkben" target="_blank">View My Github Profile</a></li>
+                <li class="icon solid fa-envelope"><a href="mailto:hsu.weni@gmail.com" target="_blank">hsu.weni@gmail.com</a>
+                </li>
+                <li class="icon solid fa-info-circle"><a href="https://www.linkedin.com/in/weni-hsu-88251777/"
+                                                         target="_blank">View My LinkedIn Profile</a></li>
+                <li class="icon solid fa fa-sitemap"><a href="https://github.com/dkben" target="_blank">View My Github
+                    Profile</a></li>
             </ul>
         </section>
 
