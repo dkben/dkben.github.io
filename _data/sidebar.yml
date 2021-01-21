@@ -16,6 +16,9 @@ toc:
       - name: 給日本人的中文學習網站
         link: https://www.yukiyuki.club/
         target: _blank
+      - name: 年菜預購平台
+        link: /new_year_food_pre_order.html
+        target: _self
   - title: Tool
     subfolderitems:
       - name: 比對2個資料庫
