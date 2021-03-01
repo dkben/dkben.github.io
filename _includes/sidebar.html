@@ -11,10 +11,10 @@
                 <li class="{{ page.class }}"><a href="index.html">Homepage</a></li>
                 {% for item in site.data.sidebar.toc %}
                 <li>
-<!--                    <span class="opener-->
-<!--{% for entry in item.subfolderitems %}-->
-<!--    {% if page.url == entry.link %}active{% endif %}-->
-<!--{% endfor %}">{{ item.title }}</span>-->
+                    <!--                    <span class="opener-->
+                    <!--{% for entry in item.subfolderitems %}-->
+                    <!--    {% if page.url == entry.link %}active{% endif %}-->
+                    <!--{% endfor %}">{{ item.title }}</span>-->
                     <span class="opener">{{ item.title }}</span>
                     <ul>
                         {% for entry in item.subfolderitems %}
@@ -41,6 +41,8 @@
                                                          target="_blank">View My LinkedIn Profile</a></li>
                 <li class="icon solid fa fa-sitemap"><a href="https://github.com/dkben" target="_blank">View My Github
                     Profile</a></li>
+                <li class="icon solid fa fa-pen-nib"><a href="https://hsu-wen-i.medium.com/" target="_blank">View My
+                    Medium</a></li>
             </ul>
         </section>
 
