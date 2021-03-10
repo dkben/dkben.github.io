@@ -47,8 +47,8 @@ toc:
         link: /
         target: _self
       - name: 更新多台遠端主機及比對
-        link: /
-        target: _self
+        link: https://hsu-wen-i.medium.com/%E5%9C%A8-windows-10-%E4%B8%8B-%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC-b15a34b235e0
+        target: _blank
       - name: Raspberry Pi Server
         link: /
         target: _self
