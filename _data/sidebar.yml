@@ -58,10 +58,10 @@ toc:
   - title: Linux
     subfolderitems:
       - name: 頻寬合併
-        link: /
+        link: /linux_bandwidth.html
         target: _self
       - name: Linux KVM
-        link: /
+        link: /linux_kvm.html
         target: _self
   - title: Other
     subfolderitems:
