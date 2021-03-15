@@ -40,3 +40,7 @@ KVM虛擬機網路問題
 
 關於此次花費7天測試KVM的心得
 [外部連結](http://ps.hsuweni.idv.tw/?p=3052)
+
+實驗用的主機
+
+![系統管理後台](images/linux-kvm/linux-kvm-01.jpg){:width="800px"}
