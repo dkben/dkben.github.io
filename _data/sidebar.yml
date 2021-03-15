@@ -42,18 +42,18 @@ toc:
   - title: Integrations
     subfolderitems:
       - name: 分散式檔案系統及驗證方法
-        link: /
+        link: /dfs.html
         target: _self
   - title: System Design
     subfolderitems:
       - name: Slack機器人
-        link: /
+        link: /slack_robot.html
         target: _self
       - name: 更新多台遠端主機及比對
         link: https://hsu-wen-i.medium.com/%E5%9C%A8-windows-10-%E4%B8%8B-%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC-b15a34b235e0
         target: _blank
       - name: Raspberry Pi Server
-        link: /
+        link: /raspberry_pi_server.html
         target: _self
   - title: Linux
     subfolderitems:
@@ -70,9 +70,6 @@ toc:
         target: _self
       - name: My Learning Methods
         link: /other_my_learning_methods.html
-        target: _self
-      - name: A Day in the Life of a Web Developer
-        link: /other_web_developer.html
         target: _self
       - name: 工作經歷
         link: /timeline.html
