@@ -12,6 +12,8 @@ title: Raspberry Pi 家用 Server 架設
 
 遇到比較大的麻煩是，因為CPU是ARM架構，所以不是每一個Docker Image都可以用，要花時間找一下並測試。
 
+另外有一篇文章 [Raspberry 4 Jenkins — 樹莓派 4 安裝執行 Jenkins (全記錄)](https://hsu-wen-i.medium.com/raspberry-4-jenkins-%E6%A8%B9%E8%8E%93%E6%B4%BE-4-%E5%AE%89%E8%A3%9D%E5%9F%B7%E8%A1%8C-jenkins-%E5%85%A8%E8%A8%98%E9%8C%84-b4899c7219b3)
+
 ---
 
 2020 年8月16日收到
