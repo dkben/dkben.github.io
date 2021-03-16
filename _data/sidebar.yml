@@ -47,8 +47,8 @@ toc:
   - title: System Design
     subfolderitems:
       - name: Slack機器人
-        link: /slack_robot.html
-        target: _self
+        link: https://hsu-wen-i.medium.com/hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-gitlab-cicd-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95-fc5f2b5d5ff1
+        target: _blank
       - name: 更新多台遠端主機及比對
         link: https://hsu-wen-i.medium.com/%E5%9C%A8-windows-10-%E4%B8%8B-%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC-b15a34b235e0
         target: _blank

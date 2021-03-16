@@ -4,7 +4,7 @@ title: Raspberry Pi 家用 Server 架設
 ---
 ## Raspberry Pi 家用 Server 架設
 
-### 用 Raspberry Pi 當 Server 可以省錢
+### 超省錢的 Server 架設方法
 
 ---
 
