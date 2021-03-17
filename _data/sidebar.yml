@@ -41,11 +41,6 @@ toc:
         target: _blank
   - title: Integrations
     subfolderitems:
-      - name: 網路檔案系統及驗證方法
-        link: /network_file_system.html
-        target: _self
-  - title: System Design
-    subfolderitems:
       - name: Slack機器人
         link: https://hsu-wen-i.medium.com/hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-gitlab-cicd-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95-fc5f2b5d5ff1
         target: _blank
@@ -54,6 +49,9 @@ toc:
         target: _blank
       - name: Raspberry Pi Server
         link: /raspberry_pi_server.html
+        target: _self
+      - name: 網路檔案系統及驗證方法
+        link: /network_file_system.html
         target: _self
   - title: Linux
     subfolderitems:
@@ -68,12 +66,6 @@ toc:
       - name: A list of skills
         link: /a_list_of_skills.html
         target: _self
-      - name: My Learning Methods
-        link: /other_my_learning_methods.html
-        target: _self
       - name: 工作經歷
         link: /timeline.html
-        target: _self
-      - name: About Me
-        link: /other_about.html
         target: _self
