@@ -8,7 +8,7 @@ title: 專業技能
 
 我自己定位是技術通才，有缺什麼就學什麼的人...
 
-主要使用 PHP 開發，使用過 CodeIgniter、Zend Framework、Symfnoy4-5、Slim4、自建框架等。
+主要使用 PHP 開發，使用過 CodeIgniter、Zend Framework、Symfony5、Slim4、自建框架等。
 
 目前喜歡用 Symfony5 開發，用 ORM Code First 方式，Fake DataFixtures 填充。
 
