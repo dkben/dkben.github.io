@@ -28,7 +28,7 @@ yeoman 是一個整合工具包 SCAFFOLDING TOOL 腳手架工具
 
 全域安裝
 
-npm install -g yo generator-hubot
+`npm install -g yo generator-hubot`
 
 ![](/images/medium/1__7qPYpHr20smVxs7LRKV5Hg.png)
 
@@ -46,17 +46,17 @@ npm install -g yo generator-hubot
 
 進專案資料夾
 
-yo hubot --adapter=slack
+`yo hubot --adapter=slack`
 
 ![](/images/medium/1__PhN6ANbQhfQRBnH6yhnAJw.png)
 
 使用在 Slack 網站申請的 API Key 執行以下指令
 
-HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack
+`HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack`
 
 ![](/images/medium/1__7vEUvoo9C9dxZ__vcpxFXDQ.png)
 
-要輸入關鍵字 help 才有效
+要輸入關鍵字 `help` 才有效
 
 ![](/images/medium/1__pt__abw7JWPgLtYFwcw__bWQ.png)
 
@@ -75,13 +75,13 @@ HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --ad
 ![](/images/medium/1__ZQLxBpP5A4DJdywYcAT0JQ.png)
 ![](/images/medium/1__v8jiQXVfhPu0NNsS5J3flA.png)
 
-另外一個預設指令 pug me
+另外一個預設指令 `pug me`
 
 ![](/images/medium/1__QPNLaTW5928hHl6KBd__Ruw.png)
 
-因為 Cabot 預設是使用 coffee script
+因為 `Cabot` 預設是使用 `coffee script`
 
-照著搜尋到的教學加入一個 configcat.coffee 檔案
+照著搜尋到的教學加入一個 `configcat.coffee` 檔案
 
 ![](/images/medium/1__QrFA4MuZfQJei5Tsinx7uA.png)
 
@@ -114,7 +114,7 @@ HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --ad
 
 在專案中使用 npm 安裝
 
-npm install decode-html
+`npm install decode-html`
 
 輸入關鍵字「norris」，有回應了，隨機返回一個笑話
 
@@ -122,7 +122,7 @@ npm install decode-html
 
 把它搬到自己的 Raspberry Pi 4 主機上執行
 
-HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack
+`HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack`
 
 ![](/images/medium/1__1S5VpmcilcH1n1Olse77Zg.png)
 
@@ -138,43 +138,33 @@ HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --ad
 
 因為佈署是透過 GitLab 的 CICD，所以要注意啟動機器人的語法
 
-before\_script:
+```shell
+before_script:
+- apt-get update -qq
+- apt-get install -qq git
+- 'which ssh-agent || ( apt-get install -qq openssh-client )'
+- eval $(ssh-agent -s)
+- ssh-add <(echo "$PI4\_SSH\_PRIVATE\_KEY")
+- mkdir -p ~/.ssh
+- '\[\[ -f /.dockerenv \]\] && echo -e "Host \*\\n\\tStrictHostKeyChecking no\\n\\n" > ~/.ssh/config'
 
-\- apt-get update -qq
-
-\- apt-get install -qq git
-
-\- 'which ssh-agent || ( apt-get install -qq openssh-client )'
-
-\- eval $(ssh-agent -s)
-
-\- ssh-add <(echo "$PI4\_SSH\_PRIVATE\_KEY")
-
-\- mkdir -p ~/.ssh
-
-\- '\[\[ -f /.dockerenv \]\] && echo -e "Host \*\\n\\tStrictHostKeyChecking no\\n\\n" > ~/.ssh/config'
-
-deploy\_staging:
-
+deploy_staging:
 type: deploy
-
 environment:
-
 name: staging
-
 url: http://220.132.xxx.xxx
 
 script:
-
-\- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web && \\rm -R catbot/ && mkdir catbot && exit"
-
-\- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web/catbot && git clone git@gitlab.com:dkben/catbot.git . && npm install && exit"
-
-\- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web/catbot && eval nohup HUBOT\_SLACK\_TOKEN=$HUBOT\_SLACK\_TOKEN ./bin/hubot --adapter slack &"
+- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web && 
+  \\rm -R catbot/ && mkdir catbot && exit"
+- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web/catbot && 
+  git clone git@gitlab.com:dkben/catbot.git . && npm install && exit"
+- ssh ben@220.132.xxx.xxx -p10022 "cd /home/ben/projects/web/catbot && 
+  eval nohup HUBOT\_SLACK\_TOKEN=$HUBOT\_SLACK\_TOKEN ./bin/hubot --adapter slack &"
 
 only:
-
-\- master
+- master
+```
 
 CICD 中有 passed 不代表機器人一定啟動成功
 
@@ -189,19 +179,19 @@ CICD 中有 passed 不代表機器人一定啟動成功
 ![](/images/medium/1__kY53nIB1__YZNrQwnhBKN__g.png)
 
 > 參考
-
-> [https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8](https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8)
-
-> [https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e](https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e)
-
-> [http://springest.io/hubot-part-1-get-it-running-locally-in-slack](http://springest.io/hubot-part-1-get-it-running-locally-in-slack)
-
-> [https://hubot.github.com/](https://hubot.github.com/)
-
-> [https://github.com/hubotio/hubot/blob/master/docs/scripting.md](https://github.com/hubotio/hubot/blob/master/docs/scripting.md)
-
-> [https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/](https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/)
-
-> [https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e](https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e)
-
-> [http://springest.io/hubot-part-1-get-it-running-locally-in-slack](http://springest.io/hubot-part-1-get-it-running-locally-in-slack)
+> 
+>[https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8](https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8)
+> 
+>[https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e](https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e)
+> 
+>[http://springest.io/hubot-part-1-get-it-running-locally-in-slack](http://springest.io/hubot-part-1-get-it-running-locally-in-slack)
+> 
+>[https://hubot.github.com/](https://hubot.github.com/)
+> 
+>[https://github.com/hubotio/hubot/blob/master/docs/scripting.md](https://github.com/hubotio/hubot/blob/master/docs/scripting.md)
+> 
+>[https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/](https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/)
+> 
+>[https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e](https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e)
+> 
+>[http://springest.io/hubot-part-1-get-it-running-locally-in-slack](http://springest.io/hubot-part-1-get-it-running-locally-in-slack)

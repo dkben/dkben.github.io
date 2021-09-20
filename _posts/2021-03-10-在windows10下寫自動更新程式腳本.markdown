@@ -12,41 +12,44 @@ tags:
 
 不過這個專案比較麻煩，每次更新程式碼，要先登入指定的 VPN，然後手動進入 3 個位置進行 git 的更新，每次更新次數也很多，所以只能自己依需求寫一個自動化腳本。
 
-用這個方式的缺點：要把 git 的帳密寫在指令裡面，但因為登遠端看指令 history 沒有發現記錄，且 windows 10 是自己的，就當作安全了…(別學我XD)
+用這個方式的缺點：要把 git 的帳密寫在指令裡面，但因為登遠端看指令 `history` 沒有發現記錄，且 windows 10 是自己的，就當作安全了…(別學我XD)
 
-注意：這裡的 git pull 要輸入帳密是因為使用 http 方式更新，在正式機上是合理的，正式機不要使用 ssh key 方式更新。
+注意：這裡的 `git pull` 要輸入帳密是因為使用 http 方式更新，在正式機上是合理的，正式機不要使用 ssh key 方式更新。
 
 客戶測試機，因為客戶測試有鎖只能用 80 埠，所以設定另外一個 IP 給 git 主機。
 
 在 Windows 10 中建立一個 git51.txt
 
+```shell
 cd projects/project1
-
 git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
+```
 
 客戶正式機
 
 在 Windows 10 中建立一個 git94.txt
 
+```shell
 cd projects/project1
-
 git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
+```
 
 客戶備份機上的測試網站 ( 私用 )
 
 在 Windows 10 中建立一個 git96.txt
 
+```shell
 cd projects/project1
-
 git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
+```
 
 在 Windows 10 中建立 run.bat 執行檔
 
+```shell
 putty -ssh ben@xxx.xxx.xxx.94 -pw password -m git94.txt
-
 putty -ssh ben@xxx.xxx.xxx.96 -pw password -m git96.txt
-
 putty -ssh ben@xxx.xxx.xxx.51 -pw password -m git51.txt
+```
 
 ![](/images/medium/1__iCM__beOBV9G9qZoWQOrUNQ.png)
 ![](/images/medium/1__WrRFBC4vER8n2ackyUh7jg.png)
@@ -59,23 +62,23 @@ putty -ssh ben@xxx.xxx.xxx.51 -pw password -m git51.txt
 
 可以搜尋關鍵字
 
-master origin/master
+`master origin/master`
 
 ### 改用以下方法!!!
 
 將遠端的 git 帳密記錄在遠端位置，所以操控端的 script 只要下達 git pull 即可
 
 > Bash script to automate Git pull
-
+>
 > [https://stackoverflow.com/questions/47339559/bash-script-to-automate-git-pull/47349643](https://stackoverflow.com/questions/47339559/bash-script-to-automate-git-pull/47349643)
-
+>
 > [https://git-scm.com/docs/git-credential-store](https://git-scm.com/docs/git-credential-store)
 
 到遠端主機的專案下執行以下
 
-git config credential.helper store
+`git config credential.helper store`
 
-然後再一次手動執行 git pull 輸入帳密，下次就不用再輸入帳密
+然後再一次手動執行 `git pull` 輸入帳密，下次就不用再輸入帳密
 
 ![](/images/medium/1__lk__fYdumQsBSrt0TxrNQAw.png)
 
@@ -85,17 +88,18 @@ git config credential.helper store
 
 在 Windows 10 中建立 git51.txt 和 git94.txt 和 git96.txt
 
+```shell
 cd projects/project1
-
 git pull
+```
 
 在 Windows 10 中建立 run.bat 執行檔 ( 要先裝 putty 連線軟體 )
 
+```shell
 putty -ssh ben@xxx.xxx.xxx.94 -pw password -m git94.txt
-
 putty -ssh ben@xxx.xxx.xxx.96 -pw password -m git96.txt
-
 putty -ssh ben@xxx.xxx.xxx.51 -pw password -m git51.txt
+```
 
 最後一樣連線客戶 VPN 再進資料夾執行 run.bat 即可…
 
@@ -107,7 +111,7 @@ putty -ssh ben@xxx.xxx.xxx.51 -pw password -m git51.txt
 
 ![](/images/medium/1__SIlDAdatuMSY3HemhrEvkQ.png)
 
-前 3 個指令稿都類似，主要就是做 git pull 的動作，最後加上一行 git log 取出最後的 git 記錄並輸出到一個檔案
+前 3 個指令稿都類似，主要就是做 `git pull` 的動作，最後加上一行 `git log` 取出最後的 git 記錄並輸出到一個檔案
 
 ![](/images/medium/1__7onVLvGVQKcqhMOTNvR7bQ.png)
 
@@ -123,25 +127,22 @@ putty -ssh ben@xxx.xxx.xxx.51 -pw password -m git51.txt
 
 主要的 bat
 
+```shell
 putty -ssh ben@xxx.xxx.xxx.94 -pw password -m script/git94.txt
-
 putty -ssh ben@xxx.xxx.xxx.96 -pw password -m script/git96.txt
-
 putty -ssh ben@xxx.xxx.xxx.51 -pw password -m script/git51.txt
-
 pscp -pw password ben@xxx.xxx.xxx.94:git.txt git-log/git-94.txt
-
 pscp -pw password ben@xxx.xxx.xxx.96:git.txt git-log/git-96.txt
-
 pscp -pw password ben@xxx.xxx.xxx.51:git.txt git-log/git-51.txt
+```
 
 遠端指令稿
 
+```shell
 cd projects/project1
-
 git pull
-
 git log -p -1 > ~/git.txt
+```
 
 最後一段 XDD
 
@@ -160,21 +161,19 @@ git log -p -1 > ~/git.txt
 
 run.bat 是專案更新程式
 
+```shell
 putty -ssh ben@xxx.xxx.xxx.94 -pw password -m script/git94.txt
-
 putty -ssh ben@xxx.xxx.xxx.96 -pw password -m script/git96.txt
-
 putty -ssh ben@xxx.xxx.xxx.51 -pw password -m script/git51.txt
 
 pscp -pw password ben@xxx.xxx.xxx.94:git.txt git-log/git-94.txt
-
 pscp -pw password ben@xxx.xxx.xxx.96:git.txt git-log/git-96.txt
-
 pscp -pw password ben@xxx.xxx.xxx.51:git.txt git-log/git-51.txt
 
 "C:\\Python38\\python.exe" "C:\\Users\\ben\\Desktop\\Script\\python\\run.py"
 
 pause
+```
 
 目錄裡的 script 腳本是登入遠端要執行的腳本，基本上大同小異
 
