@@ -1,28 +1,28 @@
 toc:
-  - title: Portfolio
+  - title: Portfolio / 作品集
     subfolderitems:
       - name: SaaS服務-影音網站系統
-        link: /saas_video_streaming.html
+        link: /portfolio/saas_video_streaming.html
         target: _self
       - name: SaaS服務-架站平台系統
-        link: /saas_webs.html
+        link: /portfolio/saas_webs.html
         target: _self
       - name: SaaS服務-線上進銷存平台
-        link: /saas_psi.html
+        link: /portfolio/saas_psi.html
         target: _self
       - name: (新創)進銷存系統
-        link: /fyerp.html
+        link: /portfolio/fyerp.html
         target: _self
       - name: (新創)拍賣系統
-        link: /agriyou.html
+        link: /portfolio/agriyou.html
         target: _self
       - name: 給日本人的中文學習網站
         link: https://www.yukiyuki.club/
         target: _blank
       - name: 年菜預購平台
-        link: /new_year_food_pre_order.html
+        link: /portfolio/new_year_food_pre_order.html
         target: _self
-  - title: Tool
+  - title: Tool / 工具
     subfolderitems:
       - name: 比對2個資料庫
         link: https://github.com/dkben/diff-db
@@ -39,33 +39,33 @@ toc:
       - name: 使用python透過csv裡的url來抓圖片
         link: https://github.com/dkben/get-photos-from-csv-url
         target: _blank
-  - title: Integrations
-    subfolderitems:
-      - name: Slack機器人
-        link: https://hsu-wen-i.medium.com/hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-gitlab-cicd-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95-fc5f2b5d5ff1
-        target: _blank
-      - name: 更新多台遠端主機及比對
-        link: https://hsu-wen-i.medium.com/%E5%9C%A8-windows-10-%E4%B8%8B-%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC-b15a34b235e0
-        target: _blank
-      - name: Raspberry Pi Server
-        link: /raspberry_pi_server.html
-        target: _self
-      - name: 網路檔案系統及驗證方法
-        link: /network_file_system.html
-        target: _self
-  - title: Linux
-    subfolderitems:
-      - name: 頻寬合併
-        link: /linux_bandwidth.html
-        target: _self
-      - name: Linux KVM
-        link: /linux_kvm.html
-        target: _self
-  - title: Other
-    subfolderitems:
-      - name: A list of skills
-        link: /a_list_of_skills.html
-        target: _self
-      - name: 工作經歷
-        link: /timeline.html
-        target: _self
+#  - title: Integrations / 實驗
+#    subfolderitems:
+#      - name: Slack機器人
+#        link: https://hsu-wen-i.medium.com/hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-gitlab-cicd-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95-fc5f2b5d5ff1
+#        target: _blank
+#      - name: 更新多台遠端主機及比對
+#        link: https://hsu-wen-i.medium.com/%E5%9C%A8-windows-10-%E4%B8%8B-%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC-b15a34b235e0
+#        target: _blank
+#      - name: Raspberry Pi Server
+#        link: /raspberry_pi_server.html
+#        target: _self
+#      - name: 網路檔案系統及驗證方法
+#        link: /network_file_system.html
+#        target: _self
+#  - title: Linux
+#    subfolderitems:
+#      - name: 頻寬合併
+#        link: /linux_bandwidth.html
+#        target: _self
+#      - name: Linux KVM
+#        link: /linux_kvm.html
+#        target: _self
+#  - title: Other / 其它
+#    subfolderitems:
+#      - name: A list of skills
+#        link: /a_list_of_skills.html
+#        target: _self
+#      - name: 工作經歷
+#        link: /timeline.html
+#        target: _self

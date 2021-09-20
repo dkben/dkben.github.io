@@ -1,3 +1,8 @@
+<style>
+    .my-tag .button {
+        margin: 5px;
+    }
+</style>
 <!-- Sidebar -->
 <div id="sidebar">
     <div class="inner">
@@ -8,14 +13,14 @@
                 <h2>Menu</h2>
             </header>
             <ul>
-                <li class="{{ page.class }}"><a href="index.html">Homepage</a></li>
+                <li class="{% if page.tags=='homepage' %}current{% endif %}"><a href="/index.html">Homepage / 首頁</a></li>
                 {% for item in site.data.sidebar.toc %}
                 <li>
-                    <!--                    <span class="opener-->
-                    <!--{% for entry in item.subfolderitems %}-->
-                    <!--    {% if page.url == entry.link %}active{% endif %}-->
-                    <!--{% endfor %}">{{ item.title }}</span>-->
-                    <span class="opener">{{ item.title }}</span>
+                    <span class="opener
+                    {% for entry in item.subfolderitems %}
+                        {% if page.url == entry.link %}active{% endif %}
+                    {% endfor %}">{{ item.title }}</span>
+<!--                    <span class="opener">{{ item.title }}</span>-->
                     <ul>
                         {% for entry in item.subfolderitems %}
                         <li class="{% if page.url== entry.link %}current{% endif %}">
@@ -25,31 +30,57 @@
                     </ul>
                 </li>
                 {% endfor %}
+                <li class="{% if page.tags=='blog' %}current{% endif %}"><a href="/blog/index.html">Blog / 學習及實驗記錄</a></li>
+                <li class="{% if page.tags=='timeline' %}current{% endif %}"><a href="/timeline.html">經歷時間軸</a></li>
             </ul>
         </nav>
 
         <!-- Section -->
         <section>
             <header class="major">
+                <h2>Tags</h2>
+            </header>
+            <div class="actions my-tag">
+                <a href="/tag/Git/" class="button small" target="_self">Git</a>
+                <a href="/tag/Jenkins/" class="button small" target="_self">Jenkins</a>
+                <a href="/tag/Linux/" class="button small" target="_self">Linux</a>
+                <a href="/tag/Symfony/" class="button small" target="_self">Symfony</a>
+                <a href="/tag/Slim/" class="button small" target="_self">Slim</a>
+                <a href="/tag/Robot/" class="button small" target="_self">Robot</a>
+                <a href="/tag/Windows/" class="button small" target="_self">Windows</a>
+                <a href="/tag/RaspberryPi/" class="button small" target="_self">RaspberryPi</a>
+                <a href="/tag/Nginx/" class="button small" target="_self">Nginx</a>
+                <a href="/tag/VueJs/" class="button small" target="_self">VueJs</a>
+                <a href="/tag/Jekyll/" class="button small" target="_self">Jekyll</a>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section>
+            <header class="major">
                 <h2>Get in touch</h2>
             </header>
-            <p>如果你對我展示的作品有興趣，歡迎與我聯絡</p>
+<!--            <p>如果你對我展示的作品有興趣，歡迎與我聯絡</p>-->
             <ul class="contact">
-                <li class="icon solid fa-envelope"><a href="mailto:hsu.weni@gmail.com" target="_blank">hsu.weni@gmail.com</a>
-                </li>
-                <li class="icon solid fa-info-circle"><a href="https://www.linkedin.com/in/weni-hsu-88251777/"
-                                                         target="_blank">View My LinkedIn Profile</a></li>
-                <li class="icon solid fa fa-sitemap"><a href="https://github.com/dkben" target="_blank">View My Github
-                    Profile</a></li>
-                <li class="icon solid fa fa-pen-nib"><a href="https://hsu-wen-i.medium.com/" target="_blank">View My
-                    Medium</a></li>
+                <li class="icon solid fa-envelope"><a href="mailto:hsu.weni@gmail.com" target="_blank">hsu.weni@gmail.com</a></li>
+<!--                <li class="icon solid fa fa-sitemap"><a href="https://github.com/dkben" target="_blank">Github</a></li>-->
+<!--                <li class="icon solid fa-info-circle"><a href="https://www.linkedin.com/in/weni-hsu-88251777/" target="_blank">LinkedIn</a></li>-->
+<!--                <li class="icon solid fa fa-pen-nib"><a href="https://hsu-wen-i.medium.com/" target="_blank">View My Medium</a></li>-->
             </ul>
+            <p>
+                <a href="https://github.com/dkben" target="_blank"><img src="/images/github.svg" alt="" class="src" width="32" height="32"></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/weni-hsu-88251777/" target="_blank"><img src="/images/linkedin.svg" alt="linkedin" class="src" width="32" height="32"></a>
+            </p>
         </section>
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>.
-                Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy; Hsu WenI. All rights reserved.<br>
+                Images: <a target="_blank" href="https://unsplash.com">Unsplash</a>.<br>
+                Design: <a target="_blank" href="https://html5up.net">HTML5 UP</a>.<br>
+                Use: <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>.
+            </p>
         </footer>
 
         {{ page.my_number }}

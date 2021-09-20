@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Linux KVM 虛擬主機實作"
+subtitle: "Linux KVM 虛擬主機實作"
+date:   2014-01-01 09:00:00 +0800
+categories: Linux
+tags:
+- "Linux"
+---
+
+使用Linux KVM實作虛擬主機的操作
+
+這是 2014 年時的實作記錄，文章在原本的Blog中
+
+文章分類
+[外部連結](http://ps.hsuweni.idv.tw/?cat=81)
+
+修改 Window 裡的 hosts 檔案，連結虛擬機裡的網站
+[外部連結](http://ps.hsuweni.idv.tw/?p=5116)
+
+隨時隨地都可以登入 VM，就算沒有網路也可以本機登入 VM
+[外部連結](http://ps.hsuweni.idv.tw/?p=5084)
+
+解決 win8 升級 win10 後，VirtualBox VM 無法開機的問題
+[外部連結](http://ps.hsuweni.idv.tw/?p=5076)
+
+KVM Bridge 橋接模式網路設定記錄
+[外部連結](http://ps.hsuweni.idv.tw/?p=4495)
+
+KVM虛擬機網路問題
+[外部連結](http://ps.hsuweni.idv.tw/?p=4309)
+
+大量架設虛擬機 Server 時，如何減少設定的時間？
+[外部連結](http://ps.hsuweni.idv.tw/?p=4237)
+
+完整安裝KVM-Host流程
+[外部連結](http://ps.hsuweni.idv.tw/?p=3059)
+
+關於此次花費7天測試KVM的心得
+[外部連結](http://ps.hsuweni.idv.tw/?p=3052)
+
+實驗用的主機
+![系統管理後台](/images/linux-kvm/linux-kvm-01.jpg){:width="800px"}
