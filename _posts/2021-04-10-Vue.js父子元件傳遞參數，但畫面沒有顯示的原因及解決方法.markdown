@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法"
+subtitle: "當「顯示明細」選擇後，按下「查詢結果」按鈕"
+date:   2021-04-10 09:00:00 +0800
+categories: VueJs
+tags:
+- "VueJs"
+---
+
+當「顯示明細」選擇後，按下「查詢結果」按鈕
+
+![](/images/medium/1__0qSQNUa__NzanRPhHrgjLyA.png)
+
+在 created 和 mounted 中各顯示父元件傳遞過來的值 ( 生命週期是 created -> mounted )
+
+![](/images/medium/1__Ie__gbnA8plIlO7HpqL1TvA.png)
+
+都是空的
+
+![](/images/medium/1__JzH7gb4cliWL5ug2cxLeeA.png)
+
+根據同事的說明，找到參考資料：
+
+> [JavaScript] bug：打api有查到資訊，但為何一直沒在營幕上？ 好用的setTimeout()
+>
+> [https://medium.com/@q29823/javascript-bug-%E6%89%93api%E6%9C%89%E6%9F%A5%E5%88%B0%E8%B3%87%E8%A8%8A-%E4%BD%86%E7%82%BA%E4%BD%95%E4%B8%80%E7%9B%B4%E6%B2%92%E5%9C%A8%E7%87%9F%E5%B9%95%E4%B8%8A-%E5%A5%BD%E7%94%A8%E7%9A%84settimeout-40206075f7e1](https://medium.com/@q29823/javascript-bug-%E6%89%93api%E6%9C%89%E6%9F%A5%E5%88%B0%E8%B3%87%E8%A8%8A-%E4%BD%86%E7%82%BA%E4%BD%95%E4%B8%80%E7%9B%B4%E6%B2%92%E5%9C%A8%E7%87%9F%E5%B9%95%E4%B8%8A-%E5%A5%BD%E7%94%A8%E7%9A%84settimeout-40206075f7e1)
+
+上面文章有提到，因為 Vue 在 Call API 和渲染畫面是同時進行的，所以上面 console 中才顯示一個 Observer 空物件
+
+不過打開 Vue tool 確定 props 確實有接收到父元件傳遞過來的值
+
+![](/images/medium/1__HA4doxU9Ro9ohLaTDsS88g.png)
+
+參考文章在 created 事件中使用 setTimeout 延遲 2 秒鐘再顯示 console 中的值，確保 Vue 有執行完 API
+
+```javascript
+created() {
+    let timeOutProcessId = setTimeout(() => {
+        console.log('list:', this.searchResult)
+    }, 2000);
+}
+```
+
+可以取到值了，不過因為是使用 created 產生，只會出現一次而以
+
+![](/images/medium/1__WoLvYuiPSXJ9LMy__Cvx3rw.png)
+
+但最好還是使用 watch 去監聽父元件傳遞過來的值是否有改變
+
+```vue
+watch: {
+    searchResult(val) {
+        this.list = val;
+        console.log('list:', this.list);
+    }
+}
+```
+
+當「顯示明細」的值有改變時
+
+![](/images/medium/1__lt2TgXjot5vPKwnT4PWxXw.png)
+
+Console 會顯示不同結果
+
+![](/images/medium/1__IvMtCbyink0FMgug__B0A__A.png)
+
+狀態：顯示明細的畫面有顯示值了
+
+![](/images/medium/1__uQRZJXnXaHgfV661K5PExQ.png)
+
+狀態：不顯示明細的畫面也有顯示值了
+
+![](/images/medium/1__gmvBP6GF1zIUAImwiqDOGw.png)

@@ -1,453 +1,568 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-20T23:58:54+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">靜態資源認證保護</title><link href="/nginx/2021/03/17/%E9%9D%9C%E6%85%8B%E8%B3%87%E6%BA%90%E8%AA%8D%E8%AD%89%E4%BF%9D%E8%AD%B7.html" rel="alternate" type="text/html" title="靜態資源認證保護" /><published>2021-03-17T09:00:00+08:00</published><updated>2021-03-17T09:00:00+08:00</updated><id>/nginx/2021/03/17/%E9%9D%9C%E6%85%8B%E8%B3%87%E6%BA%90%E8%AA%8D%E8%AD%89%E4%BF%9D%E8%AD%B7</id><content type="html" xml:base="/nginx/2021/03/17/%E9%9D%9C%E6%85%8B%E8%B3%87%E6%BA%90%E8%AA%8D%E8%AD%89%E4%BF%9D%E8%AD%B7.html">&lt;p&gt;網路檔案系統及驗證方法&lt;/p&gt;
-
-&lt;p&gt;讀取靜態資源前都要先完成指定認證&lt;/p&gt;
-
-&lt;p&gt;下面連結是透過Nginx來實現靜態資源認證保護的方式&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hsu-wen-i.medium.com/%E9%9D%9C%E6%85%8B%E8%B3%87%E6%BA%90%E8%AA%8D%E8%AD%89%E4%BF%9D%E8%AD%B7-e0cd50b6db58&quot;&gt;靜態資源認證保護&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">網路檔案系統及驗證方法</summary></entry><entry><title type="html">Hubot 聊天機器人串 Slack，並使用 GitLab CICD 自動佈署及啟動</title><link href="/integrations/2021/03/16/Hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-Slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-GitLab-CICD-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95.html" rel="alternate" type="text/html" title="Hubot 聊天機器人串 Slack，並使用 GitLab CICD 自動佈署及啟動" /><published>2021-03-16T09:00:00+08:00</published><updated>2021-03-16T09:00:00+08:00</updated><id>/integrations/2021/03/16/Hubot%20%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2%20Slack,%E4%B8%A6%E4%BD%BF%E7%94%A8%20GitLab%20CICD%20%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95</id><content type="html" xml:base="/integrations/2021/03/16/Hubot-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E4%B8%B2-Slack-%E4%B8%A6%E4%BD%BF%E7%94%A8-GitLab-CICD-%E8%87%AA%E5%8B%95%E4%BD%88%E7%BD%B2%E5%8F%8A%E5%95%9F%E5%8B%95.html">&lt;p&gt;先到自己的 Slack 安裝 Hubot App&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hsuweni.slack.com/apps&quot;&gt;https://hsuweni.slack.com/apps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__9bHpKKti56H9osZAo7bKig.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;給它一個名字&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__cR8UkhG0__vhxUKO7Qpy0EA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;會得到一個 API Key&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__oaYW3oKw97__n1jYcNRoZXw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;yeoman 是一個整合工具包 SCAFFOLDING TOOL 腳手架工具&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://yeoman.io/&quot;&gt;https://yeoman.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;全域安裝&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install -g yo generator-hubot&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__7qPYpHr20smVxs7LRKV5Hg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一直無法成功…&lt;/p&gt;
-
-&lt;p&gt;算了，睡覺去….&lt;/p&gt;
-
-&lt;p&gt;結果一覺醒來，重新嘗試就可以安裝了&lt;/p&gt;
-
-&lt;p&gt;不過我習慣電腦不關機，但會把程式關閉，所以有可能是 terminal 重啟的關係&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__ix9jgYF4WNB__2CT8TjpSyw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;建立一個 catbot 專案&lt;/p&gt;
-
-&lt;p&gt;進專案資料夾&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yo hubot --adapter=slack&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__PhN6ANbQhfQRBnH6yhnAJw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用在 Slack 網站申請的 API Key 執行以下指令&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__7vEUvoo9C9dxZ__vcpxFXDQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;要輸入關鍵字 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;help&lt;/code&gt; 才有效&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__pt__abw7JWPgLtYFwcw__bWQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;簡單測試 ping，有回應 PONG 就是成功&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__CQvZpTGuGEt1GX2ZRjlmlw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;提示有說明 image me 是請 catbot 送一張圖片過來，但也提示要你自己設定自訂的搜尋引擎，預設的 Google 不一定能一直提供&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__VfbzeUYzYsVOBPpDFoQsIg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;也可以叫聊天機器人給我地圖&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__joJTW8YcDX0OJlmtNjQmrg.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__8gctdPHOoWzHT1y8CCNTkw.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__ZQLxBpP5A4DJdywYcAT0JQ.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__v8jiQXVfhPu0NNsS5J3flA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;另外一個預設指令 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pug me&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__QPNLaTW5928hHl6KBd__Ruw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;因為 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cabot&lt;/code&gt; 預設是使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coffee script&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;照著搜尋到的教學加入一個 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;configcat.coffee&lt;/code&gt; 檔案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__QrFA4MuZfQJei5Tsinx7uA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;輸入以下&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__TxFDoCgdjt7wlq3n71oEUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;無效….&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__bXGUMEj517xE6__1Q8JvQVg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有可能是它引用的 API 位置已經掛掉了&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__OO9t5CuM__Sd3jX38p32cjg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;不要用 Coffee Script，用 ES6 語法來寫&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://keestalkstech.com/2018/01/hubot-es6-promises/&quot;&gt;https://keestalkstech.com/2018/01/hubot-es6-promises/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__iPk8KLDf__MQM3gArSO6QNw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一樣失敗…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__E60P95kyD4Z8xKLh4LxPJw.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__Pk4mVQEIcE0zxIbhz5si1w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有提示是說找不到 decode-html 這個模組&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__SPQ3kNTSaRcZp50uaAS1VQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在專案中使用 npm 安裝&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install decode-html&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;輸入關鍵字「norris」，有回應了，隨機返回一個笑話&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__glVFFTHVYJ8THACruqnz0A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;把它搬到自己的 Raspberry Pi 4 主機上執行&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HUBOT\_SLACK\_TOKEN=xoxb-1299715080640-1559432386100-xxxxxxxxxx ./bin/hubot --adapter slack&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__1S5VpmcilcH1n1Olse77Zg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;除了在專案中建立佈署主機的 SSH Key 外&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__RfR1yZVP01fUoWFyW6rpag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;也要建立一開始的 Slack Hubot Key&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__VuvcMbF2NG3dfMHfJIMofA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;注意⚠️&lt;/p&gt;
-
-&lt;p&gt;因為佈署是透過 GitLab 的 CICD，所以要注意啟動機器人的語法&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;before_script:
-- apt-get update &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt;
-- apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; git
-- &lt;span class=&quot;s1&quot;&gt;&apos;which ssh-agent || ( apt-get install -qq openssh-client )&apos;&lt;/span&gt;
-- &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;ssh-agent &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-- ssh-add &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PI4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;SSH&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PRIVATE&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;KEY&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-- &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; ~/.ssh
-- &lt;span class=&quot;s1&quot;&gt;&apos;\[\[ -f /.dockerenv \]\] &amp;amp;&amp;amp; echo -e &quot;Host \*\\n\\tStrictHostKeyChecking no\\n\\n&quot; &amp;gt; ~/.ssh/config&apos;&lt;/span&gt;
-
-deploy_staging:
-&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: deploy
-environment:
-name: staging
-url: http://220.132.xxx.xxx
-
-script:
-- ssh ben@220.132.xxx.xxx &lt;span class=&quot;nt&quot;&gt;-p10022&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;cd /home/ben/projects/web &amp;amp;&amp;amp; 
-  &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;rm -R catbot/ &amp;amp;&amp;amp; mkdir catbot &amp;amp;&amp;amp; exit&quot;&lt;/span&gt;
-- ssh ben@220.132.xxx.xxx &lt;span class=&quot;nt&quot;&gt;-p10022&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;cd /home/ben/projects/web/catbot &amp;amp;&amp;amp; 
-  git clone git@gitlab.com:dkben/catbot.git . &amp;amp;&amp;amp; npm install &amp;amp;&amp;amp; exit&quot;&lt;/span&gt;
-- ssh ben@220.132.xxx.xxx &lt;span class=&quot;nt&quot;&gt;-p10022&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;cd /home/ben/projects/web/catbot &amp;amp;&amp;amp; 
-  eval nohup HUBOT&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;SLACK&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;TOKEN=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HUBOT&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;SLACK&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;TOKEN ./bin/hubot --adapter slack &amp;amp;&quot;&lt;/span&gt;
-
-only:
-- master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;CICD 中有 passed 不代表機器人一定啟動成功&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__K__sN__LuupWrPbu6ayGYTgQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果有要修改 CICD 的佈署腳本，最好還是本機先執行確認再 push&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__kCelmG39kJk1aqYBv__sMag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用 GitLab CICD 佈署後，確定機器人有啟動&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__kY53nIB1__YZNrQwnhBKN__g.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-21T13:43:04+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">關於docker compose啟動時，指定使用不同設定檔的方式</title><link href="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="關於docker compose啟動時，指定使用不同設定檔的方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker%20compose%E5%95%9F%E5%8B%95%E6%99%82,%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html">&lt;p&gt;原本一直想使用 .env 的方式載入，但一直無法成功&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;參考&lt;/p&gt;
+  &lt;p&gt;— env-file option #6170&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8&quot;&gt;https://dev.to/configcat/complete-guide-to-build-a-slack-chatbot-in-7-minutes-and-host-it-for-free-1ef8&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/docker/compose/issues/6170&quot;&gt;https://github.com/docker/compose/issues/6170&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e&quot;&gt;https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Environment variables in Compose&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://springest.io/hubot-part-1-get-it-running-locally-in-slack&quot;&gt;http://springest.io/hubot-part-1-get-it-running-locally-in-slack&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://hubot.github.com/&quot;&gt;https://hubot.github.com/&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://github.com/hubotio/hubot/blob/master/docs/scripting.md&quot;&gt;https://github.com/hubotio/hubot/blob/master/docs/scripting.md&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/&quot;&gt;https://www.loggly.com/blog/building-chatops-bot-slack-loggly-part-1/&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e&quot;&gt;https://chatbotslife.com/building-a-slackbot-with-hubot-85016dd1477e&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://springest.io/hubot-part-1-get-it-running-locally-in-slack&quot;&gt;http://springest.io/hubot-part-1-get-it-running-locally-in-slack&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="integrations" /><category term="Robot" /><summary type="html">先到自己的 Slack 安裝 Hubot App</summary></entry><entry><title type="html">在windows10下寫自動更新程式腳本</title><link href="/integrations/2021/03/10/%E5%9C%A8windows10%E4%B8%8B%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC.html" rel="alternate" type="text/html" title="在windows10下寫自動更新程式腳本" /><published>2021-03-10T22:09:32+08:00</published><updated>2021-03-10T22:09:32+08:00</updated><id>/integrations/2021/03/10/%E5%9C%A8windows10%E4%B8%8B%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC</id><content type="html" xml:base="/integrations/2021/03/10/%E5%9C%A8windows10%E4%B8%8B%E5%AF%AB%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BC%8F%E8%85%B3%E6%9C%AC.html">&lt;p&gt;關於自動化更新，之前有研究過在 Mac 筆電下用 &lt;a href=&quot;https://deployer.org/&quot;&gt;deployer&lt;/a&gt; 這個 PHP 工具來做佈署更新，也有回滾功能。&lt;/p&gt;
-
-&lt;p&gt;不過這個專案比較麻煩，每次更新程式碼，要先登入指定的 VPN，然後手動進入 3 個位置進行 git 的更新，每次更新次數也很多，所以只能自己依需求寫一個自動化腳本。&lt;/p&gt;
-
-&lt;p&gt;用這個方式的缺點：要把 git 的帳密寫在指令裡面，但因為登遠端看指令 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;history&lt;/code&gt; 沒有發現記錄，且 windows 10 是自己的，就當作安全了…(別學我XD)&lt;/p&gt;
-
-&lt;p&gt;注意：這裡的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt; 要輸入帳密是因為使用 http 方式更新，在正式機上是合理的，正式機不要使用 ssh key 方式更新。&lt;/p&gt;
-
-&lt;p&gt;客戶測試機，因為客戶測試有鎖只能用 80 埠，所以設定另外一個 IP 給 git 主機。&lt;/p&gt;
-
-&lt;p&gt;在 Windows 10 中建立一個 git51.txt&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;projects/project1
-git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;客戶正式機&lt;/p&gt;
-
-&lt;p&gt;在 Windows 10 中建立一個 git94.txt&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;projects/project1
-git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;客戶備份機上的測試網站 ( 私用 )&lt;/p&gt;
-
-&lt;p&gt;在 Windows 10 中建立一個 git96.txt&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;projects/project1
-git pull http://user:password@xxx.xxx.xxx.xxx/ben/project1.git master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在 Windows 10 中建立 run.bat 執行檔&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.94 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git94.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.96 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git96.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.51 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git51.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__iCM__beOBV9G9qZoWQOrUNQ.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__WrRFBC4vER8n2ackyUh7jg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;當然，還是要先連線客戶的 VPN，然後進資料夾，點 2 下 run.bat 檔案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__gTvcqUUpPsuEDEfLejUT9w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用上面的方法，發現遠端主機 pull 下來後，似乎會不同步本地分支，雖然程式碼看起來有更新，但並沒有自動的 merge&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/compose/environment-variables/&quot;&gt;https://docs.docker.com/compose/environment-variables/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;可以搜尋關鍵字&lt;/p&gt;
+&lt;p&gt;類似這樣&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master origin/master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__CtJsdEzRDzevj04hgz2Y8Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;改用以下方法&quot;&gt;改用以下方法!!!&lt;/h3&gt;
+&lt;p&gt;不管是用這樣&lt;/p&gt;
 
-&lt;p&gt;將遠端的 git 帳密記錄在遠端位置，所以操控端的 script 只要下達 git pull 即可&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose --env-file ./.env.dev up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;還是這樣&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose --env-file=./.env.dev up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;啟動後 env 的值都帶不進去&lt;/p&gt;
+
+&lt;p&gt;查看環境變數也是看不到&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose --env-file ./.env.dev config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;這樣也看不到&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose --env-file=./.env.dev config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;經過一個下午的測試 ( 在我的 Mac Pro 中 )&lt;/p&gt;
+
+&lt;p&gt;只有這種方式可以有效區分不同的環境變數&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__oVEErF28371fYP3NYTQfvw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;啟動後&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;查看啟動後的環境變數&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__yV__vg283SFl6__yAKde9vkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;⚠️ 發現如果啟動時，使用不同的設定檔&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose -f docker-compose.dev.yml up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;當下達以下指令時，仍會返回 docker-compose.yml 的值&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;但啟動的 Container 確實是使用不同的設定檔沒錯&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">原本一直想使用 .env 的方式載入，但一直無法成功</summary></entry><entry><title type="html">PhpStorm+Docker+PHP8+Xdebug3的設定方式</title><link href="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="PhpStorm+Docker+PHP8+Xdebug3的設定方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html">&lt;p&gt;Configure Xdebug&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Bash script to automate Git pull&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/47339559/bash-script-to-automate-git-pull/47349643&quot;&gt;https://stackoverflow.com/questions/47339559/bash-script-to-automate-git-pull/47349643&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://git-scm.com/docs/git-credential-store&quot;&gt;https://git-scm.com/docs/git-credential-store&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&quot;&gt;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;到遠端主機的專案下執行以下&lt;/p&gt;
+&lt;p&gt;在本機查看 Container 裡的 PHP 資訊，確定有裝 Xdebug 3&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config credential.helper store&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -ti opencart3_web_1 sh -c &quot;php -v&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;然後再一次手動執行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt; 輸入帳密，下次就不用再輸入帳密&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____oVP0D4WPV7hbZsi9TdLAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__lk__fYdumQsBSrt0TxrNQAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;設定 Debug&lt;/p&gt;
 
-&lt;p&gt;腳本換成以下&lt;/p&gt;
+&lt;p&gt;⚠️ 下圖的 2 要打勾&lt;/p&gt;
 
-&lt;p&gt;客戶測試機&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2dwILtt2yA1hyubfuvT6__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;在 Windows 10 中建立 git51.txt 和 git94.txt 和 git96.txt&lt;/p&gt;
+&lt;p&gt;設定 Server，Docker Container 所使用的本機埠號和資料夾對應要設定好&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;projects/project1
-git pull
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2iUQUXqoGVqBUOOBoxfWQg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定執行設定，建立一個 PHP Web Page，選擇上面建立的 Server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__3NVBix5eH0NsA7gtnoloGg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;啟動監聽，按下綠色蟲蟲的按鈕，選擇入口點&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__j22DQYF__HKbNX9J9In4Xzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果出現以下警告，代表 mapping 的資料夾不正確，重新設定&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__yhMC0H7ibbve5qudi__iZkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定本機和 Container 裡的資料夾對應&lt;/p&gt;
+
+&lt;p&gt;兩邊的相對位置可以不同，所以才會讓使用者視需要一個一個資料夾設定對應關係&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__J33ApfTuQMYnPE5LtLRsAQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;前台會一直轉圈圈&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__v6NLPuYk93Jc__dC8w2w25Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;透過以下按鈕進入下一步&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__73fLto3FsY0Psiz1hE8swA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;選擇 Debugger 標籤查看&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____9HL5hHZZvt3wNtttZVTRA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">Configure Xdebug</summary></entry><entry><title type="html">微軟WSL2中Ubuntu的家目錄，存放在Windows的位置</title><link href="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="微軟WSL2中Ubuntu的家目錄，存放在Windows的位置" /><published>2021-06-23T09:00:00+08:00</published><updated>2021-06-23T09:00:00+08:00</updated><id>/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84,%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE</id><content type="html" xml:base="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html">&lt;p&gt;實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__M7oFwrkZIanu1RBVPgspLw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;開始檔案總管，在路徑列輸入&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\\wsl$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__akAc0hXlONCsafxRpwzmew.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一層一層進去後，可以看到 Ubuntu 中 Home 目錄在 Windows 中的路徑&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\\wsl$\Ubuntu-20.04\home\ben\projects&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__XPRe6FSZaeHrKBtKimUjAA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;參考&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/116126/access-wsl2ubuntu-drive-from-file-explorer.html&quot;&gt;https://docs.microsoft.com/en-us/answers/questions/116126/access-wsl2ubuntu-drive-from-file-explorer.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-256-CBC</title><link href="/nginx/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-256-CBC" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/nginx/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-256-CBC</id><content type="html" xml:base="/nginx/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__hoLbq8__JA0TdxuZhKonWUQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;要先修改成 AES-256-CBC&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2PnaO4__ZWuYP0wuYV__AHZw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;單次修改&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SET block_encryption_mode = &apos;aes-256-cbc&apos;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;全域修改&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SET global block_encryption_mode = &apos;AES-256-CBC&apos;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;查看&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SHOW VARIABLES LIKE &apos;%block%&apos;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;不過正式時，要直接修改 my.cnf，確定編碼規則在每一次資料載重啟時都一致，不然會有問題&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://dev.mysql.com/doc/mysql-secure-deployment-guide/5.7/en/secure-deployment-block-encryption-mode.html&quot;&gt;https://dev.mysql.com/doc/mysql-secure-deployment-guide/5.7/en/secure-deployment-block-encryption-mode.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第 1 點：原本主 key 有使用 hash 256 取得一個 64 字元&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2240973/how-long-is-the-sha256-hash/2241014&quot;&gt;https://stackoverflow.com/questions/2240973/how-long-is-the-sha256-hash/2241014&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第 2 點：然後再用這個加密後的 key 再做一次 hash 但只取 16 個字元 ( Initialization Vector ) ( iv ) 向量初始化&lt;/p&gt;
+
+&lt;p&gt;第 3 點：是告訴 PHP 使用 openssl_encrypt 時，要返回 Raw 格式資料&lt;/p&gt;
+
+&lt;p&gt;第 4 點：自己做 Base 64 編碼&lt;/p&gt;
+
+&lt;p&gt;⚠️ 如果透過 openssl_encrypt 處理，會得到預期外的結果，所以自己用 PHP 或 MySQL 的 Base 64 處理&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__vOQ__D__81G__7YRNXjY1cL1A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;透過加密後的 key 和 iv 加密儲存的值，但發現雙方不一致&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__Pm8OKauNvPYt__VMJySCXCA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;主 Key 不做 hash 試試&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__XEugfgK1bN6wScpcO8wxVg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;雙方加密後的值一致了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__l__q9wQiinfwIYBP__W9daeQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 重要注意事項&lt;/p&gt;
+
+&lt;p&gt;所以目前知道一個狀況&lt;/p&gt;
+
+&lt;p&gt;就是 key 太長，會造成 PHP 和 MySQL 做 AES 的結果不一致&lt;/p&gt;
+
+&lt;p&gt;這是 Google 到的資訊&lt;/p&gt;
+
+&lt;p&gt;密鑰長度：AES-128-ECB 密鑰長度為 128bits (As of MySQL 5.6.17, key lengths of 196 or 256 bits can be used)，但使用 AES_ENCRYPT()、AES_DECRYPT() 時，如果輸入太短或太長的密鑰，MySQL 會自動處理成 128bits&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://security.stackexchange.com/questions/190611/mysql-aes-encrypt-string-key-length&quot;&gt;https://security.stackexchange.com/questions/190611/mysql-aes-encrypt-string-key-length&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;解決方法就是減少主 key 的字串長度&lt;/p&gt;
+
+&lt;p&gt;然後 Initialization Vector 也是一樣，要注意是否符合演算法的規範&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html&quot;&gt;https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For modes that require the optional init_vector argument, it must be 16 bytes or longer (bytes in excess of 16 are ignored). An error occurs if init_vector is missing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__f3UnQ3pPDiiDR3S6jox3hA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 Equal 比對&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__aVGm8S1jx7BN5tCu1yDYiQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__4QpGUd7gicqUXXp6EmkXhQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 LIKE 搜尋&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__xBIFBYAG6__Mi6L6a3Yg5Gg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____dMER8WwVZjUEBW05XduCw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;⚠️ 注意事項&lt;/p&gt;
+
+&lt;p&gt;因為用 PHP 程式或 MySQL 的 AES 解編碼後會得到二進位資料&lt;/p&gt;
+
+&lt;p&gt;如果資料欄位不是用二位進檔案形式儲存的話 ( BINARY, VARBINARY, TINYBLOB, BLOB, MEDIUMBLOB, LONGBLOG )&lt;/p&gt;
+
+&lt;p&gt;就要另外做一次 BASE 64 的解編碼&lt;/p&gt;
+
+&lt;p&gt;像下圖就是欄位是一般的 VARCHAR，不過儲存時送進去是二進位，所以造成亂碼，此外也不一定能再取出解碼 AES 復原成原本的字串&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__IqFFYWWjh6cTLt__Osq50MQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-128-ECB</title><link href="/nginx/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-128-ECB" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/nginx/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-128-ECB</id><content type="html" xml:base="/nginx/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__hoLbq8__JA0TdxuZhKonWUQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;AES-128-ECB 不需要 Initialization Vector 值&lt;/p&gt;
+
+&lt;p&gt;key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__q0bV2j4hPzPw39ufLLo8Yw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// $key = hash(&quot;sha256&quot;, $AES_key);  // 不要這樣用，字串太長的話 MySQL 會另外做處理&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sha256&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$AES_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;在 Windows 10 中建立 run.bat 執行檔 ( 要先裝 putty 連線軟體 )&lt;/p&gt;
+&lt;p&gt;使用 PHP 和 MySQL 進行編碼，得到一致的結果&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.94 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git94.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.96 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git96.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.51 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; git51.txt
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__0sfz9WOLSQG2zNgjx3RE__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 Equal 比對&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__L8AnrwO1o__Y3H__anK17Zug.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/medium/1__eVwENC__R5ABuRpApwJHW5A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 LIKE 搜尋&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__UCYOUcSQS15I0fbsR2__J4g.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/medium/1__plgsvxhGhOpVnAIIMS2UcA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">SA、SD 工具</title><link href="/nginx/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html" rel="alternate" type="text/html" title="SA、SD 工具" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/nginx/2021/05/03/SA%E3%80%81SD%E5%B7%A5%E5%85%B7</id><content type="html" xml:base="/nginx/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html">&lt;p&gt;最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。&lt;/p&gt;
+
+&lt;p&gt;記錄組織創意的工具&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://milanote.com/&quot; title=&quot;https://milanote.com/&quot;&gt;&lt;strong&gt;Milanote - the tool for organizing creative projects&lt;/strong&gt;&lt;br /&gt;
+_Collect everything in one place Anything you save in the Milanote app will be ready to organize as soon as you’re back…_milanote.com&lt;/a&gt;&lt;a href=&quot;https://milanote.com/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__vlUC9qbK7v4__gsJBFe__BkQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;非常不錯的工具，因為創意初期想法變動通常很快很大，可以馬上修正，比手繪還方便。&lt;/p&gt;
+
+&lt;p&gt;畫 UI 的工具&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.axure.com/&quot;&gt;https://www.axure.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__P__oZeyGrj515HpxJQt4LoA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;這應該不用特別講了，非常專業的UI工具，而且也可以發佈到雲端空間分享給同事。&lt;/p&gt;
+
+&lt;p&gt;使用 Lucid 來畫 UML 圖&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lucid.app/&quot; title=&quot;https://lucid.app/&quot;&gt;&lt;strong&gt;Log in&lt;/strong&gt;&lt;br /&gt;
+_Edit description_lucid.app&lt;/a&gt;&lt;a href=&quot;https://lucid.app/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__8Gt0xFdwEUXbLmdBrucsgg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;也是不錯的工具，但很快就會達到免費使用的上限。&lt;/p&gt;
+
+&lt;p&gt;如果不考慮價格的話，我會希望同時使用以上 3 個服務來完成 SA、SD 的工作。但目前打算用 Axure 來畫 UML 圖，可以省一些錢。&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。</summary></entry><entry><title type="html">Vue.js子元件部份資訊未重置問題</title><link href="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html" rel="alternate" type="text/html" title="Vue.js子元件部份資訊未重置問題" /><published>2021-04-18T09:00:00+08:00</published><updated>2021-04-18T09:00:00+08:00</updated><id>/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C</id><content type="html" xml:base="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html">&lt;p&gt;VueJS 父、子元件表單的計算總金額會一直加總的問題&lt;/p&gt;
+
+&lt;p&gt;這是一個看起來很簡單的功能&lt;/p&gt;
+
+&lt;p&gt;選好月份、廠商，按下查詢，最後出現明細，然後明細的總金額加總&lt;/p&gt;
+
+&lt;p&gt;但明細的呈現是使用子元件，父元件是上面 1, 2, 3 的表單部份&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__jgd9yK2__II__ohTIZkBR9NQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;父組件，傳給子組件，預設一個總金額 0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2kuOHaNc9XSvCGndmS5H6Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然後子組件接收，並設定到子組件自己的變數中，此時每次變動子組件的這個值，應該起始都是 0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__8Sfeyfp4PoXt0IauJfWMtA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不過子組件會 watch 另外一個父組件的 list 值，用來加總剛剛的預設總金額&lt;/p&gt;
+
+&lt;p&gt;此時我的預期時，因為每次父元件都會傳一個預設值為 0 的總金額進來子元件&lt;/p&gt;
+
+&lt;p&gt;所以子元件都會從 0 開始計算，我是這麼想的…&lt;/p&gt;
+
+&lt;p&gt;所以原本邏輯就是如下圖，依據不同單據進行累計的加或減的計算&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__x86F2hYoVVDhQk7lQUfWzA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但在父組件操作時，每按下一次&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__T10zVFk6Rrd__O__cGUplEBA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那個值就會一直加上去，所以只有第一次是對的，但之後刷新都是錯的&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__kiEHipQzWJBeLFmZJn7FTw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但是如果我在每次重新 render list 時重置子元件的所需要的總金額為 0 的話&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__13lkOKlgvquc____8YSDcmoA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;會造成不管怎麼算最後金額都是 0，不會有任何動作&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__4u4H5bm3fFlpjfZ8okgqrA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;過了一天…&lt;/p&gt;
+
+&lt;p&gt;雖然有在懷疑說會不會是 key 值的問題…( 之前使用 for 迴圈加上 key 值，可以讓 list 的值確定綁定到 HTML 中的元素，但沒有想過 component 也會需要 )&lt;/p&gt;
+
+&lt;p&gt;不過實際加上廠商 vendor 的編號後&lt;/p&gt;
+
+&lt;p&gt;在切換不同月份、廠商時，最後加總金額是對的&lt;/p&gt;
+
+&lt;p&gt;不會再把之前廠商的金額也加上去了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____A5ieXlhmgIwUmkjDZVh8g.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不過在同一頁面重複按下查詢&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__KBKdolw0nrktllY__S5DLEQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;仍是會重複加總相同月份、相同廠商的金額&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__wTN3wr3IpaBZZBKHp__5u__g.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;總之有找到方向了就是元件的快取問題&quot;&gt;總之有找到方向了，就是元件的快取問題!!!&lt;/h4&gt;
+
+&lt;p&gt;每次發送查詢，會使用新的 key&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__YJFQ0MyweSKLNUcq__QPL4g.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然後元件的 key 值會使用剛剛發送的 form.key 時間，所以每一個查詢都會使用一個新的元件&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__fvEbfJJlSPI8UYswnZgWtA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OK，正常了&lt;/p&gt;
+
+&lt;p&gt;當切換不同月份、廠商的最後加總金額，每次都會重新計算了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__AdzKT5YYCoOLGGphaooHTQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一直在相同的頁面按下多次的查詢&lt;/p&gt;
+
+&lt;p&gt;總金額也不會一直加上去了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__j8y4uDWeI__FkBTVJcnmtxQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不過雖然有解決問題，但並不確定這是不是個好方法&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;參考
+vue component key random&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://jackmaurer.github.io/2020/01/09/generating-unique-vue-keys.html&quot;&gt;https://jackmaurer.github.io/2020/01/09/generating-unique-vue-keys.html&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/48570163/vuesjs-generate-randomkey-in-v-for-loop&quot;&gt;https://stackoverflow.com/questions/48570163/vuesjs-generate-randomkey-in-v-for-loop&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://forum.vuejs.org/t/what-key-to-use-in-v-for-where-items-have-no-identity/60111&quot;&gt;https://forum.vuejs.org/t/what-key-to-use-in-v-for-where-items-have-no-identity/60111&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;In Vue.js, how to disable caching of computed properties?&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties&quot;&gt;https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">VueJS 父、子元件表單的計算總金額會一直加總的問題</summary></entry><entry><title type="html">Vue.js parse html string 在Vue.js中轉換HTML標籤</title><link href="/vuejs/2021/04/10/Vue.js-parse-html-string-%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4.html" rel="alternate" type="text/html" title="Vue.js parse html string 在Vue.js中轉換HTML標籤" /><published>2021-04-10T09:00:00+08:00</published><updated>2021-04-10T09:00:00+08:00</updated><id>/vuejs/2021/04/10/Vue.js%20parse%20html%20string%20%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4</id><content type="html" xml:base="/vuejs/2021/04/10/Vue.js-parse-html-string-%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4.html">&lt;p&gt;有一個屬性 isPay ( 值為字串 0, 1 ) 需要特別判斷&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__upb4nirvNLWpkdBLdp3RSw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;要用 bootstrap 4 的 badge 做效果&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://getbootstrap.com/docs/5.0/components/badge/&quot;&gt;https://getbootstrap.com/docs/5.0/components/badge/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__DRNEyqJrxgHpkcIYnIBKQQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但執行後直接顯示 HTML&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__KE6VY0sElvBkRSDkuy5hIg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;將原本&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;付款狀態：{ { order.isPay } }&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;改為&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;付款狀態：&amp;lt;span v-html=&quot;order.isPay&quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;成功顯示 badge 了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__lF3f__hk3w47OXXRLJUusjg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;關鍵字&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vue parse html string&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;參考&lt;/p&gt;
+
+&lt;p&gt;對我而言，這個有效&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“vue parse html” Code Answer&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://www.codegrepper.com/code-examples/html/vue+parse+html&quot;&gt;https://www.codegrepper.com/code-examples/html/vue+parse+html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;使用 3 個括號對我而言會編譯失敗&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;convert string to Dom in vuejs&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs&quot;&gt;https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;Reintroduce Triple Curly Braces { { { } } } as a v-html alternative #7431&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://github.com/vuejs/vue/issues/7431&quot;&gt;https://github.com/vuejs/vue/issues/7431&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">有一個屬性 isPay ( 值為字串 0, 1 ) 需要特別判斷</summary></entry><entry><title type="html">Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法</title><link href="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html" rel="alternate" type="text/html" title="Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法" /><published>2021-04-10T09:00:00+08:00</published><updated>2021-04-10T09:00:00+08:00</updated><id>/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8,%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95</id><content type="html" xml:base="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html">&lt;p&gt;當「顯示明細」選擇後，按下「查詢結果」按鈕&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__0qSQNUa__NzanRPhHrgjLyA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在 created 和 mounted 中各顯示父元件傳遞過來的值 ( 生命週期是 created -&amp;gt; mounted )&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__Ie__gbnA8plIlO7HpqL1TvA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;都是空的&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__JzH7gb4cliWL5ug2cxLeeA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根據同事的說明，找到參考資料：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[JavaScript] bug：打api有查到資訊，但為何一直沒在營幕上？ 好用的setTimeout()&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://medium.com/@q29823/javascript-bug-%E6%89%93api%E6%9C%89%E6%9F%A5%E5%88%B0%E8%B3%87%E8%A8%8A-%E4%BD%86%E7%82%BA%E4%BD%95%E4%B8%80%E7%9B%B4%E6%B2%92%E5%9C%A8%E7%87%9F%E5%B9%95%E4%B8%8A-%E5%A5%BD%E7%94%A8%E7%9A%84settimeout-40206075f7e1&quot;&gt;https://medium.com/@q29823/javascript-bug-%E6%89%93api%E6%9C%89%E6%9F%A5%E5%88%B0%E8%B3%87%E8%A8%8A-%E4%BD%86%E7%82%BA%E4%BD%95%E4%B8%80%E7%9B%B4%E6%B2%92%E5%9C%A8%E7%87%9F%E5%B9%95%E4%B8%8A-%E5%A5%BD%E7%94%A8%E7%9A%84settimeout-40206075f7e1&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;上面文章有提到，因為 Vue 在 Call API 和渲染畫面是同時進行的，所以上面 console 中才顯示一個 Observer 空物件&lt;/p&gt;
+
+&lt;p&gt;不過打開 Vue tool 確定 props 確實有接收到父元件傳遞過來的值&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__HA4doxU9Ro9ohLaTDsS88g.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;參考文章在 created 事件中使用 setTimeout 延遲 2 秒鐘再顯示 console 中的值，確保 Vue 有執行完 API&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeOutProcessId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;list:&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;最後一樣連線客戶 VPN 再進資料夾執行 run.bat 即可…&lt;/p&gt;
+&lt;p&gt;可以取到值了，不過因為是使用 created 產生，只會出現一次而以&lt;/p&gt;
 
-&lt;p&gt;接續上面的動作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__WoLvYuiPSXJ9LMy__Cvx3rw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;補上最後驗證是否有更新成功的動作&lt;/p&gt;
+&lt;p&gt;但最好還是使用 watch 去監聽父元件傳遞過來的值是否有改變&lt;/p&gt;
 
-&lt;p&gt;指令稿分 2 段，前 3 行是更新，後 3 行是把遠端主機檔案拷貝回來&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__SIlDAdatuMSY3HemhrEvkQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;前 3 個指令稿都類似，主要就是做 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt; 的動作，最後加上一行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log&lt;/code&gt; 取出最後的 git 記錄並輸出到一個檔案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__7onVLvGVQKcqhMOTNvR7bQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;⚠️ 要先手動建立 git-log 資料夾&lt;/p&gt;
-
-&lt;p&gt;執行後，會在本機 windows 中建立 3 個檔案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__N5IWaYAzWEo1NACtii8DSw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;目前仍需要手動核對 3 個 log 檔案，確保程式碼是最新版本&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__3KLgx9Ys9Jj5k3eDLwUuyA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;主要的 bat&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.94 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git94.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.96 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git96.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.51 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git51.txt
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.94:git.txt git-log/git-94.txt
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.96:git.txt git-log/git-96.txt
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.51:git.txt git-log/git-51.txt
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;watch: {
+    searchResult(val) {
+        this.list = val;
+        console.log(&apos;list:&apos;, this.list);
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;遠端指令稿&lt;/p&gt;
+&lt;p&gt;當「顯示明細」的值有改變時&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;projects/project1
-git pull
-git log &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~/git.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__lt2TgXjot5vPKwnT4PWxXw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;最後一段 XDD&lt;/p&gt;
+&lt;p&gt;Console 會顯示不同結果&lt;/p&gt;
 
-&lt;p&gt;在 Windows 10 執行結果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__IvMtCbyink0FMgug__B0A__A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;手動連線客戶 VPN&lt;/p&gt;
+&lt;p&gt;狀態：顯示明細的畫面有顯示值了&lt;/p&gt;
 
-&lt;p&gt;執行更新程式 bat，由程式呼叫 Windows 裡的 Python 執行比對程式，進行 3 台主機的 Commit ID 檢查&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__uQRZJXnXaHgfV661K5PExQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__RiQ0l2vd0Auos7spu819kg.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__771qfaMGllYxJwgjqvSA2A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;狀態：不顯示明細的畫面也有顯示值了&lt;/p&gt;
 
-&lt;p&gt;根目錄下有 2 個 bat 執行檔&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__gmvBP6GF1zIUAImwiqDOGw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">當「顯示明細」選擇後，按下「查詢結果」按鈕</summary></entry><entry><title type="html">Symfony整合Google登入的實作</title><link href="/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C.html" rel="alternate" type="text/html" title="Symfony整合Google登入的實作" /><published>2021-04-06T09:00:00+08:00</published><updated>2021-04-06T09:00:00+08:00</updated><id>/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C</id><content type="html" xml:base="/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C.html">&lt;p&gt;跟整合 Facebook 的方式一樣，參考以下方式&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__MyLBs8Pt8U__tpjs9Y9dmdw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Easily talk to an OAuth2 server for social functionality in Symfony&lt;/p&gt;
 
-&lt;p&gt;run.bat 是專案更新程式&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/knpuniversity/oauth2-client-bundle&quot;&gt;https://github.com/knpuniversity/oauth2-client-bundle&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.94 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git94.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.96 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git96.txt
-putty &lt;span class=&quot;nt&quot;&gt;-ssh&lt;/span&gt; ben@xxx.xxx.xxx.51 &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; script/git51.txt
+  &lt;p&gt;Easily implement Google login with Symfony 4&lt;/p&gt;
 
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.94:git.txt git-log/git-94.txt
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.96:git.txt git-log/git-96.txt
-pscp &lt;span class=&quot;nt&quot;&gt;-pw&lt;/span&gt; password ben@xxx.xxx.xxx.51:git.txt git-log/git-51.txt
+  &lt;p&gt;&lt;a href=&quot;https://hugo-soltys.com/blog/easily-implement-google-login-with-symfony-4&quot;&gt;https://hugo-soltys.com/blog/easily-implement-google-login-with-symfony-4&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;span class=&quot;s2&quot;&gt;&quot;C:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Python38&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;python.exe&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ben&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Desktop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Script&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;run.py&quot;&lt;/span&gt;
+&lt;p&gt;Google 開發者介面&lt;/p&gt;
 
-pause
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://console.cloud.google.com/apis/credentials&quot; title=&quot;https://console.cloud.google.com/apis/credentials&quot;&gt;&lt;strong&gt;Google Cloud Platform&lt;/strong&gt;&lt;br /&gt;
+_Google Cloud Platform lets you build, deploy, and scale applications, websites, and services on the same infrastructure…_console.cloud.google.com&lt;/a&gt;&lt;a href=&quot;https://console.cloud.google.com/apis/credentials&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;目錄裡的 script 腳本是登入遠端要執行的腳本，基本上大同小異&lt;/p&gt;
+&lt;p&gt;不過使用 Google 時出現了授權錯誤&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__wpYSSPf8a__Qw4URbFYIVnA.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__krSJhHroaQTMZKcvavi3lw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="integrations" /><category term="Windows" /><summary type="html">關於自動化更新，之前有研究過在 Mac 筆電下用 deployer 這個 PHP 工具來做佈署更新，也有回滾功能。</summary></entry><entry><title type="html">Raspberry Pi 家用 Server 架設</title><link href="/integrations/2020/08/16/Raspberry-Pi-%E5%AE%B6%E7%94%A8-Server-%E6%9E%B6%E8%A8%AD.html" rel="alternate" type="text/html" title="Raspberry Pi 家用 Server 架設" /><published>2020-08-16T09:00:00+08:00</published><updated>2020-08-16T09:00:00+08:00</updated><id>/integrations/2020/08/16/Raspberry%20Pi%20%E5%AE%B6%E7%94%A8%20Server%20%E6%9E%B6%E8%A8%AD</id><content type="html" xml:base="/integrations/2020/08/16/Raspberry-Pi-%E5%AE%B6%E7%94%A8-Server-%E6%9E%B6%E8%A8%AD.html">&lt;p&gt;超省錢的 Server 架設方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__FbFqC4wjNi5pfwv8b0uWOg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;目前是把親朋好友的網站搬回家裡的 Raspberry Pi 中存放，可以省下一些錢。&lt;/p&gt;
+&lt;p&gt;後來發現每一個 Google Cloud Platform 專案只能設定一個網站的 OAuth，原本的已經有別的專案使用了，所以設定的 callback 位置會造成授權錯誤&lt;/p&gt;
 
-&lt;p&gt;遇到比較大的麻煩是，因為CPU是ARM架構，所以不是每一個Docker Image都可以用，要花時間找一下並測試。&lt;/p&gt;
+&lt;p&gt;再建立一個新的專案&lt;/p&gt;
 
-&lt;p&gt;另外有一篇文章 &lt;a href=&quot;https://hsu-wen-i.medium.com/raspberry-4-jenkins-%E6%A8%B9%E8%8E%93%E6%B4%BE-4-%E5%AE%89%E8%A3%9D%E5%9F%B7%E8%A1%8C-jenkins-%E5%85%A8%E8%A8%98%E9%8C%84-b4899c7219b3&quot;&gt;Raspberry 4 Jenkins — 樹莓派 4 安裝執行 Jenkins (全記錄)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__49__keYBxR__ZzFU__lGWbaAg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;切換到新的專案&lt;/p&gt;
 
-&lt;p&gt;2020 年8月16日收到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__5wnw0tKa__ncmfxfPy2X4Ug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;一次買 3 台，其中有一台是同事的&lt;/p&gt;
+&lt;p&gt;設定憑證和 OAuth 資訊&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-01.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__RSC9UqU__vpNJeNMNJ40fHg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;有送袋子&lt;/p&gt;
+&lt;p&gt;測試 Google 登入&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-02.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__db0r1li5FsGApb76zG3kRw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-03.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;成功了，可以選擇 Google 帳戶了&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-04.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__a2Iw4aPYo6IzaFVAGoN7jA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-05.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;登入後也可以取得資訊&lt;/p&gt;
 
-&lt;p&gt;變壓器比想像中還大，所以只是這樣接，將來可能會換成 USB 電源 HUB，可以節省空間&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__LT7T0g8aQzfsPhZk2rXlqQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-06.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;透過 Google 註冊新建帳號也 OK&lt;/p&gt;
 
-&lt;p&gt;選擇無桌面版本，直接 CLI 介面操作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__168iw5ypgvNhmfsxu9Ob7A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-07.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;但登出後，因為 Symfnoy 5 的router 設定可能有問題，自動被導向 en 語系了&lt;/p&gt;
 
-&lt;p&gt;Raspberry Pi 4 的接線方式，螢幕要接在 HDMI-1 的位置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__eElm1xNYmJbxLdj0t5426Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-08.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;此時如果再次使用 Google 登入，就會造成授權錯誤，因為 callback 位置多了一個 en 字綴&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-09.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__gQnmkpGvgZWUVfGlD0HTPA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-10.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;把所有會用到的語系 URI 都加到授權清單中&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;安裝-docker&quot;&gt;安裝 Docker&lt;/h2&gt;
-
-&lt;p&gt;下載安裝腳本&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl -fsSL https://get.docker.com -o get-docker.sh&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;執行安裝腳本&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo sh get-docker.sh&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;裝好要重啟系統才會正常&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/raspberry-pi4-server/raspberry-pi4-server-11.png&quot; alt=&quot;Raspberry Pi4&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;另外，也在樹莓派上掛載免費的Google Drive 15GB空間 (使用 rclone 工具)&lt;/p&gt;</content><author><name></name></author><category term="integrations" /><category term="RaspberryPi" /><summary type="html">超省錢的 Server 架設方法</summary></entry><entry><title type="html">Linux KVM 虛擬主機實作</title><link href="/linux/2014/01/01/Linux-KVM-%E8%99%9B%E6%93%AC%E4%B8%BB%E6%A9%9F%E5%AF%A6%E4%BD%9C.html" rel="alternate" type="text/html" title="Linux KVM 虛擬主機實作" /><published>2014-01-01T09:00:00+08:00</published><updated>2014-01-01T09:00:00+08:00</updated><id>/linux/2014/01/01/Linux%20KVM%20%E8%99%9B%E6%93%AC%E4%B8%BB%E6%A9%9F%E5%AF%A6%E4%BD%9C</id><content type="html" xml:base="/linux/2014/01/01/Linux-KVM-%E8%99%9B%E6%93%AC%E4%B8%BB%E6%A9%9F%E5%AF%A6%E4%BD%9C.html">&lt;p&gt;使用Linux KVM實作虛擬主機的操作&lt;/p&gt;
-
-&lt;p&gt;這是 2014 年時的實作記錄，文章在原本的Blog中&lt;/p&gt;
-
-&lt;p&gt;文章分類
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?cat=81&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;修改 Window 裡的 hosts 檔案，連結虛擬機裡的網站
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=5116&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;隨時隨地都可以登入 VM，就算沒有網路也可以本機登入 VM
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=5084&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;解決 win8 升級 win10 後，VirtualBox VM 無法開機的問題
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=5076&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;KVM Bridge 橋接模式網路設定記錄
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=4495&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;KVM虛擬機網路問題
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=4309&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;大量架設虛擬機 Server 時，如何減少設定的時間？
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=4237&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;完整安裝KVM-Host流程
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=3059&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;關於此次花費7天測試KVM的心得
-&lt;a href=&quot;http://ps.hsuweni.idv.tw/?p=3052&quot;&gt;外部連結&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;實驗用的主機
-&lt;img src=&quot;/images/linux-kvm/linux-kvm-01.jpg&quot; alt=&quot;系統管理後台&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Linux" /><summary type="html">使用Linux KVM實作虛擬主機的操作</summary></entry><entry><title type="html">多線路頻寬合併</title><link href="/linux/2014/01/01/%E5%A4%9A%E7%B7%9A%E8%B7%AF%E9%A0%BB%E5%AF%AC%E5%90%88%E4%BD%B5.html" rel="alternate" type="text/html" title="多線路頻寬合併" /><published>2014-01-01T09:00:00+08:00</published><updated>2014-01-01T09:00:00+08:00</updated><id>/linux/2014/01/01/%E5%A4%9A%E7%B7%9A%E8%B7%AF%E9%A0%BB%E5%AF%AC%E5%90%88%E4%BD%B5</id><content type="html" xml:base="/linux/2014/01/01/%E5%A4%9A%E7%B7%9A%E8%B7%AF%E9%A0%BB%E5%AF%AC%E5%90%88%E4%BD%B5.html">&lt;p&gt;自己的 Site project&lt;/p&gt;
-
-&lt;p&gt;使用多台ADSL實作多線路頻寬合併&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/bandwidth/bandwidth-01.png&quot; alt=&quot;使用多台ADSL實作多線路頻寬合併&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Linux" /><summary type="html">自己的 Site project</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__P4Eo__Yeavf0aS1upVX__lXQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">跟整合 Facebook 的方式一樣，參考以下方式</summary></entry></feed>

@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "中華電信ADSL小烏龜登入工程師模式"
+subtitle: "因為增加了 Raspberry Pi，需要設定埠號轉發，使用之前的帳密登入中華電信ADSL小烏龜時…"
+date:   2021-03-28 09:00:00 +0800
+categories: Nginx
+tags:
+- "Nginx"
+---
+
+因為增加了 Raspberry Pi，需要設定埠號轉發，使用之前的帳密登入中華電信ADSL小烏龜時…
+
+![](/images/medium/1__MYjBY5qbLuscvi15k6taHQ.png)
+
+發現原本的功能選項都不見了，只剩下基本的設定而以
+
+![](/images/medium/1__E1IFCd029N0fbxbOA1sEig.png)
+
+Google 了一下，得知中華電信有更新機器韌體，把一些進階功能放到另一個工程師帳號中
+
+先查小烏龜的 MAC 號碼，取後 4 碼
+
+`arp -a`
+
+![](/images/medium/1__HLNgxSIEXu45a19NT4UBWA.png)
+
+查看機器型號，然後組合剛剛的 MAC 後 4 碼
+
+![](/images/medium/1__TT3Gh1zvfQVTgF6eHrDDyg.png)
+
+帳號：cht
+
+密碼：型號+ MAC 後 4 碼
+
+成功登入工程師界面了
+
+![](/images/medium/1__NlXjTl6z967i9__AOcxAsQw.png)
+
+> 參考
+>
+> [https://www.est.idv.tw/%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%E6%95%B8%E6%93%9A%E6%A9%9F-2018%E6%9B%B4%E6%96%B0%E7%89%88%E6%9C%AC%E5%BE%8C%E5%AF%86%E7%A2%BC/](https://www.est.idv.tw/%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%E6%95%B8%E6%93%9A%E6%A9%9F-2018%E6%9B%B4%E6%96%B0%E7%89%88%E6%9C%AC%E5%BE%8C%E5%AF%86%E7%A2%BC/)
+>
+> [https://blog.impochun.com/latest-cht-pass/](https://blog.impochun.com/latest-cht-pass/)

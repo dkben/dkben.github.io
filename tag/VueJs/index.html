@@ -8,9 +8,10 @@ tags:
 <ul>
     {% for post in site.tags.VueJs %}
     <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         {{ post.excerpt }}
-<!--        <small class="post-date">{{ post.date | date_to_string }}</small>-->
+        <small class="post-date">{{ post.date | date_to_string }}</small>
+        <hr>
     </li>
     {% endfor %}
 </ul>

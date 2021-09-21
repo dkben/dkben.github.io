@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "後端傳值到前端JS時，日期格式的處理"
+subtitle: "因為日期在後端是用 Datetime 格式儲存，而且 ORM 型別為 Datetime"
+date:   2021-03-09 09:00:00 +0800
+categories: Jekyll
+tags:
+- "Jekyll"
+---
+
+因為日期在後端是用 Datetime 格式儲存，而且 ORM 型別為 Datetime
+
+當後端傳值到前端時，日期格式會變成以下
+
+![](/images/medium/1__Xkk8kbkLc__0oZoQQbxojTg.png)
+
+如果直接賦值
+
+![](/images/medium/1__VSGYXl3QbWrQ3zNDwvfqzw.png)
+
+會顯示格式不符
+
+![](/images/medium/1__fACVsvrw4EEk__DYdtMa3CA.png)
+
+> 最後參考這篇
+>
+> JavaScript format Date as YYYY-MM-DD
+>
+> [https://dev.to/racztiborzoltan/javascript-format-date-as-yyyy-mm-dd-4ef3](https://dev.to/racztiborzoltan/javascript-format-date-as-yyyy-mm-dd-4ef3)
+
+它是用字串截取的方式
+
+```javascript
+const orderDate = new Date(purchase.orderDate).toISOString().slice(0, 10);
+console.log(orderDate);
+```
+
+截取後的日期文字
+
+![](/images/medium/1__o49SKXGHsjgJUZZsun4__RQ.png)
+
+加到 Vue JS 程式碼中
+
+![](/images/medium/1__LyhETZqS7mdaM1__yokV8HA.png)
+
+成功顯示日期了
+
+![](/images/medium/1__r5R4KH5iOOWPADB2tZEC7Q.png)
+
+另外有找到其它建議，表示所有日期時間，如果使用 Timestamp 來儲存，在後端就可以統一使用 integer 來操作

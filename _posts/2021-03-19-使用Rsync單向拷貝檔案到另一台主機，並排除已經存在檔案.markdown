@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "使用Rsync單向拷貝檔案到另一台主機，並排除已經存在檔案"
+subtitle: "如果有2台主機要做資料同步，在不考慮自動雙向同步時，而是手動的雙向同步"
+date:   2021-03-19 09:00:00 +0800
+categories: Nginx
+tags:
+- "Nginx"
+---
+
+如果有 2 台主機要做資料同步，在不考慮自動雙向同步時，而是手動的雙向同步
+
+例如：
+
+A 拷貝到 B，然後 B 再拷貝到 A 補足檔案
+
+但當第 2 次 B 拷貝到 A 時，可以排除已經存在檔案加快速度
+
+![](/images/medium/1__GM0oHAXKMtiRclm0o__A1Kg.png)
+
+指令如下
+
+`rsync -av -e "ssh -p22299" --ignore-existing /home/pi/tmp/01/ pi@pi4:/home/pi/tmp/02/`
+
+![](/images/medium/1__VzXTJv0B__x2DBubuoo0zzA.png)

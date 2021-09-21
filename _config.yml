@@ -55,6 +55,9 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+exclude:
+  - not_use_page
+
 # Gems
 #gems: [jekyll-paginate]
 paginate: 10

@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Vue.js parse html string 在Vue.js中轉換HTML標籤"
+subtitle: "有一個屬性 isPay (值為字串 0, 1) 需要特別判斷"
+date:   2021-04-10 09:00:00 +0800
+categories: VueJs
+tags:
+- "VueJs"
+---
+
+有一個屬性 isPay ( 值為字串 0, 1 ) 需要特別判斷
+
+![](/images/medium/1__upb4nirvNLWpkdBLdp3RSw.png)
+
+要用 bootstrap 4 的 badge 做效果
+
+> [https://getbootstrap.com/docs/5.0/components/badge/](https://getbootstrap.com/docs/5.0/components/badge/)
+
+![](/images/medium/1__DRNEyqJrxgHpkcIYnIBKQQ.png)
+
+但執行後直接顯示 HTML
+
+![](/images/medium/1__KE6VY0sElvBkRSDkuy5hIg.png)
+
+將原本
+
+`付款狀態：{ { order.isPay } }`
+
+改為
+
+`付款狀態：<span v-html="order.isPay"></span>`
+
+成功顯示 badge 了
+
+![](/images/medium/1__lF3f__hk3w47OXXRLJUusjg.png)
+
+關鍵字
+
+`vue parse html string`
+
+參考
+
+對我而言，這個有效
+
+> “vue parse html” Code Answer
+>
+> [https://www.codegrepper.com/code-examples/html/vue+parse+html](https://www.codegrepper.com/code-examples/html/vue+parse+html)
+
+使用 3 個括號對我而言會編譯失敗
+
+> convert string to Dom in vuejs
+>
+> [https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs](https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs)
+>
+> Reintroduce Triple Curly Braces { { { } } } as a v-html alternative #7431
+>
+> [https://github.com/vuejs/vue/issues/7431](https://github.com/vuejs/vue/issues/7431)

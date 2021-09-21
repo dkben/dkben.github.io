@@ -1,17 +1,277 @@
 ---
 layout: post
 title:  "靜態資源認證保護"
-subtitle: "靜態資源認證保護"
+subtitle: "最簡單版本，測試環境 macOS"
 date:   2021-03-17 09:00:00 +0800
 categories: Nginx
 tags:
 - "Nginx"
 ---
 
-網路檔案系統及驗證方法
+先到本機裡的 Nginx 設定檔中，建立一個設定檔叫 protect-static-file.local
 
-讀取靜態資源前都要先完成指定認證
+其中 protect-static-file.local 的設定檔
 
-下面連結是透過Nginx來實現靜態資源認證保護的方式
+```apacheconf
+server {
+    listen 8401;
+    server_name 127.0.0.1;
+    
+    location / {
+        auth_request /auth;
+        auth_request_set $auth_status $upstream_status;
+    }
 
-[靜態資源認證保護](https://hsu-wen-i.medium.com/%E9%9D%9C%E6%85%8B%E8%B3%87%E6%BA%90%E8%AA%8D%E8%AD%89%E4%BF%9D%E8%AD%B7-e0cd50b6db58)
+    location = /auth {
+        internal;
+        proxy_pass http://127.0.0.1:8402/auth.php;
+        proxy_pass_request_body off;
+        proxy_set_header Content-Length "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Authorization $http_authorization;
+        proxy_pass_header Authorization;
+    }
+
+    error_log /var/log/nginx/protect-static-file-error.log;
+    access_log /var/log/nginx/protect-static-file.log;
+}
+```
+
+在 macOS 中檢查 Nginx 設定檔
+
+`sudo nginx -t`
+
+重啟 Nginx
+
+`sudo nginx -s reload`
+
+到測試的專案資料夾中
+
+![](/images/medium/1__5qqbSBqpfB0TC6KEjQBbCw.png)
+
+啟動 PHP Build-in web server 服務
+
+注意 ⚠️ 這是獨立的網站
+
+`php -S 127.0.0.1:8402`
+
+其中的 auth.php 裡面如下，用來簡單測試成功、失敗 ( 手動修改 )
+
+```php
+function echo403() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 403 Unauthorized');
+  echo 'Text to send if user hits Cancel button';
+}
+
+function echo200() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 200 Unauthorized');
+  echo 'ok';
+}
+
+echo403();
+// echo200();
+```
+
+將返回值改為失敗時
+
+![](/images/medium/1__hMJLUMVXgbYD74GAKsSzFA.png)
+
+看一下 PHP Build-in web server 時，確定進入首頁 / 時，有被導向 auth.php
+
+![](/images/medium/1__Fp9nnQow51KHmK__QMXaqMw.png)
+
+當返回成功時
+
+![](/images/medium/1__X0GQPyEnJcO9RwtqbeZ7MQ.png)
+
+![](/images/medium/1__sQm____uZotV__mpkTdlQzjZA.png)
+
+### **圖片保護**
+
+這次在根目錄中設定一個 root 參數，指向有圖片檔案的位置
+
+```apacheconf
+server {
+    listen 8401;
+    server_name 127.0.0.1;
+
+    location / {
+      root /Users/ben/media/file/private;
+      auth_request /auth;
+      auth_request_set $auth_status $upstream_status;
+    }
+
+    location = /auth {
+        internal;
+        proxy_pass http://127.0.0.1:8402/auth.php;
+        proxy_pass_request_body off;
+        proxy_set_header Content-Length "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Authorization $http_authorization;
+        proxy_pass_header Authorization;
+    }
+
+    error_log /var/log/nginx/protect-static-file-error.log;
+    access_log /var/log/nginx/protect-static-file.log;
+}
+```
+
+![](/images/medium/1__79RId7HEZDdtjlJc5skASA.png)
+
+在專案中的 auth.php 一樣使用手動方式進行測試
+
+![](/images/medium/1__kWO1z9__EZM0__Q5z__wtvCng.png)
+
+```php
+function echo403() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 403 Unauthorized');
+  echo 'Text to send if user hits Cancel button';
+}
+
+function echo200() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 200 Unauthorized');
+  echo 'ok';
+}
+
+// echo403();
+echo200();
+```
+
+成功時，可以取得圖片
+
+![](/images/medium/1__kIW78IOJkOZvEpxRnAn76A.png)
+
+失敗時返回 403
+
+![](/images/medium/1__LxEtGw8sFWmtYEbbHwZqig.png)
+
+### **自訂路徑的圖片保護**
+
+如下圖，自訂一個 private 路徑，用來做 URL 路由下的檔案保護
+
+這裡要注意的是 URL 路由要搭配實際的檔案資料夾路徑來使用
+
+```apacheconf
+server {
+    listen 8401;
+    server_name 127.0.0.1;
+
+    location / {
+        return 403;
+    }
+    
+    location /private/ {
+        root /Users/ben/media/file;
+        auth_request /auth;
+        auth_request_set $auth_status $upstream_status;
+    }
+    
+    location = /auth {
+        internal;
+        proxy_pass http://127.0.0.1:8402/auth.php;
+        proxy_pass_request_body off;
+        proxy_set_header Content-Length "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Authorization $http_authorization;
+        proxy_pass_header Authorization;
+    }
+
+    error_log /var/log/nginx/protect-static-file-error.log;
+    access_log /var/log/nginx/protect-static-file.log;
+}
+```
+
+主要設定區塊如下
+
+```apacheconf
+location /private/ {
+  root /Users/ben/media/file;
+  auth_request /auth;
+  auth_request_set $auth_status $upstream_status;
+}
+```
+
+在根路由 URL 後有 private 路徑
+
+![](/images/medium/1__wU15m3V1dHDpBXIXa4FQCQ.png)
+
+對應設定檔 root 根檔案路徑裡的 private 資料夾
+
+![](/images/medium/1__wZbfWufP__FtSImkyl5uAkA.png)
+
+可以觀察剛剛設定的 log 檔案
+
+/var/log/nginx/protect-static-file.log
+
+有成功取得圖片的 log 記錄
+
+> 127.0.0.1 - - \[08/Aug/2020:08:44:44 +0800\] "GET /private/001.jpg HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+認證頁面
+
+```apacheconf
+location = /auth {
+  internal;
+  proxy_pass http://127.0.0.1:8402/auth.php;
+  proxy_pass_request_body off;
+  proxy_set_header Content-Length "";
+  proxy_set_header Host $host;
+  proxy_set_header X-Original-URI $request_uri;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header Authorization $http_authorization;
+  proxy_pass_header Authorization;
+}
+```
+
+認證頁程式碼
+
+![](/images/medium/1__JSimLn__JNfUGxeVbVLJ__Gg.png)
+
+```php
+function echo403() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 403 Unauthorized');
+  echo 'Text to send if user hits Cancel button';
+}
+
+function echo200() {
+  header('WWW-Authenticate: Basic realm="My Realm"');
+  header('HTTP/1.0 200 Unauthorized');
+  echo 'ok';
+}
+
+// echo403();
+echo200();
+```
+
+禁止訪問首頁
+
+```apacheconf
+location / {
+  return 403;
+}
+```
+
+![](/images/medium/1__1CLq2NlWLmdtB4dsd8zKLw.png)
+
+> 參考
+>
+> [https://stackoverflow.com/questions/54733347/nginx-auth-request-is-ignored](https://stackoverflow.com/questions/54733347/nginx-auth-request-is-ignored)

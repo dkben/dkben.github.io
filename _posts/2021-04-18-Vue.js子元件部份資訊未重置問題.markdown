@@ -1,0 +1,110 @@
+---
+layout: post
+title:  "Vue.js子元件部份資訊未重置問題"
+subtitle: "Vue.js父、子元件表單的計算總金額會一直加總的問題"
+date:   2021-04-18 09:00:00 +0800
+categories: VueJs
+tags:
+- "VueJs"
+---
+
+VueJS 父、子元件表單的計算總金額會一直加總的問題
+
+這是一個看起來很簡單的功能
+
+選好月份、廠商，按下查詢，最後出現明細，然後明細的總金額加總
+
+但明細的呈現是使用子元件，父元件是上面 1, 2, 3 的表單部份
+
+![](/images/medium/1__jgd9yK2__II__ohTIZkBR9NQ.png)
+
+父組件，傳給子組件，預設一個總金額 0
+
+![](/images/medium/1__2kuOHaNc9XSvCGndmS5H6Q.png)
+
+然後子組件接收，並設定到子組件自己的變數中，此時每次變動子組件的這個值，應該起始都是 0
+
+![](/images/medium/1__8Sfeyfp4PoXt0IauJfWMtA.png)
+
+不過子組件會 watch 另外一個父組件的 list 值，用來加總剛剛的預設總金額
+
+此時我的預期時，因為每次父元件都會傳一個預設值為 0 的總金額進來子元件
+
+所以子元件都會從 0 開始計算，我是這麼想的…
+
+所以原本邏輯就是如下圖，依據不同單據進行累計的加或減的計算
+
+![](/images/medium/1__x86F2hYoVVDhQk7lQUfWzA.png)
+
+但在父組件操作時，每按下一次
+
+![](/images/medium/1__T10zVFk6Rrd__O__cGUplEBA.png)
+
+那個值就會一直加上去，所以只有第一次是對的，但之後刷新都是錯的
+
+![](/images/medium/1__kiEHipQzWJBeLFmZJn7FTw.png)
+
+但是如果我在每次重新 render list 時重置子元件的所需要的總金額為 0 的話
+
+![](/images/medium/1__13lkOKlgvquc____8YSDcmoA.png)
+
+會造成不管怎麼算最後金額都是 0，不會有任何動作
+
+![](/images/medium/1__4u4H5bm3fFlpjfZ8okgqrA.png)
+
+過了一天…
+
+雖然有在懷疑說會不會是 key 值的問題…( 之前使用 for 迴圈加上 key 值，可以讓 list 的值確定綁定到 HTML 中的元素，但沒有想過 component 也會需要 )
+
+不過實際加上廠商 vendor 的編號後
+
+在切換不同月份、廠商時，最後加總金額是對的
+
+不會再把之前廠商的金額也加上去了
+
+![](/images/medium/1____A5ieXlhmgIwUmkjDZVh8g.png)
+
+不過在同一頁面重複按下查詢
+
+![](/images/medium/1__KBKdolw0nrktllY__S5DLEQ.png)
+
+仍是會重複加總相同月份、相同廠商的金額
+
+![](/images/medium/1__wTN3wr3IpaBZZBKHp__5u__g.png)
+
+#### 總之有找到方向了，就是元件的快取問題!!!
+
+每次發送查詢，會使用新的 key
+
+![](/images/medium/1__YJFQ0MyweSKLNUcq__QPL4g.png)
+
+然後元件的 key 值會使用剛剛發送的 form.key 時間，所以每一個查詢都會使用一個新的元件
+
+![](/images/medium/1__fvEbfJJlSPI8UYswnZgWtA.png)
+
+OK，正常了
+
+當切換不同月份、廠商的最後加總金額，每次都會重新計算了
+
+![](/images/medium/1__AdzKT5YYCoOLGGphaooHTQ.png)
+
+一直在相同的頁面按下多次的查詢
+
+總金額也不會一直加上去了
+
+![](/images/medium/1__j8y4uDWeI__FkBTVJcnmtxQ.png)
+
+不過雖然有解決問題，但並不確定這是不是個好方法
+
+> 參考
+> vue component key random
+>
+> [https://jackmaurer.github.io/2020/01/09/generating-unique-vue-keys.html](https://jackmaurer.github.io/2020/01/09/generating-unique-vue-keys.html)
+>
+> [https://stackoverflow.com/questions/48570163/vuesjs-generate-randomkey-in-v-for-loop](https://stackoverflow.com/questions/48570163/vuesjs-generate-randomkey-in-v-for-loop)
+>
+> [https://forum.vuejs.org/t/what-key-to-use-in-v-for-where-items-have-no-identity/60111](https://forum.vuejs.org/t/what-key-to-use-in-v-for-where-items-have-no-identity/60111)
+>
+> In Vue.js, how to disable caching of computed properties?
+>
+> [https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties](https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties)
