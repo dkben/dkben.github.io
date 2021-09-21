@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-21T13:43:04+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">關於docker compose啟動時，指定使用不同設定檔的方式</title><link href="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="關於docker compose啟動時，指定使用不同設定檔的方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker%20compose%E5%95%9F%E5%8B%95%E6%99%82,%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html">&lt;p&gt;原本一直想使用 .env 的方式載入，但一直無法成功&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-21T18:39:00+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">將自己Medium Blog下載回來並轉換成Markdown格式</title><link href="/nginx/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1-Medium-Blog-%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90-Markdown-%E6%A0%BC%E5%BC%8F.html" rel="alternate" type="text/html" title="將自己Medium Blog下載回來並轉換成Markdown格式" /><published>2021-09-21T09:00:00+08:00</published><updated>2021-09-21T09:00:00+08:00</updated><id>/nginx/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1%20Medium%20Blog%20%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90%20Markdown%20%E6%A0%BC%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1-Medium-Blog-%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90-Markdown-%E6%A0%BC%E5%BC%8F.html">&lt;p&gt;用 npm 安裝 medium-2-md 工具&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://www.npmjs.com/package/medium-2-md&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm i -g medium-2-md&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-09-21/2021-09-21-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;到 medium 下載自己的 blog 回來，文章會在 posts 資料夾裡面&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-09-21/2021-09-21-02.png&quot; alt=&quot;&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;執行以下轉換指令&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;medium-2-md convertLocal &apos;posts&apos; -dfi&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-09-21/2021-09-21-03.png&quot; alt=&quot;&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;轉換後會在原本 posts 資料夾裡面，新增一個 md_時間戳 的資料夾&lt;/p&gt;
+
+&lt;p&gt;原本文章標題大多是中文，轉換後會用 - 符號代替，圖片的話會整合在 img 資料夾&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-09-21/2021-09-21-04.png&quot; alt=&quot;&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;有順利轉成 md 格式了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-09-21/2021-09-21-05.png&quot; alt=&quot;&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;參考&lt;/p&gt;
+
+  &lt;p&gt;medium-2-md: Convert Medium posts to markdown with front matter&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://www.gautamdhameja.com/medium-to-markdown-converter/&quot;&gt;https://www.gautamdhameja.com/medium-to-markdown-converter/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">用 npm 安裝 medium-2-md 工具</summary></entry><entry><title type="html">PhpStorm+Docker+PHP8+Xdebug3的設定方式</title><link href="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="PhpStorm+Docker+PHP8+Xdebug3的設定方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html">&lt;p&gt;Configure Xdebug&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&quot;&gt;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在本機查看 Container 裡的 PHP 資訊，確定有裝 Xdebug 3&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -ti opencart3_web_1 sh -c &quot;php -v&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____oVP0D4WPV7hbZsi9TdLAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定 Debug&lt;/p&gt;
+
+&lt;p&gt;⚠️ 下圖的 2 要打勾&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2dwILtt2yA1hyubfuvT6__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定 Server，Docker Container 所使用的本機埠號和資料夾對應要設定好&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2iUQUXqoGVqBUOOBoxfWQg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定執行設定，建立一個 PHP Web Page，選擇上面建立的 Server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__3NVBix5eH0NsA7gtnoloGg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;啟動監聽，按下綠色蟲蟲的按鈕，選擇入口點&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__j22DQYF__HKbNX9J9In4Xzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果出現以下警告，代表 mapping 的資料夾不正確，重新設定&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__yhMC0H7ibbve5qudi__iZkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定本機和 Container 裡的資料夾對應&lt;/p&gt;
+
+&lt;p&gt;兩邊的相對位置可以不同，所以才會讓使用者視需要一個一個資料夾設定對應關係&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__J33ApfTuQMYnPE5LtLRsAQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;前台會一直轉圈圈&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__v6NLPuYk93Jc__dC8w2w25Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;透過以下按鈕進入下一步&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__73fLto3FsY0Psiz1hE8swA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;選擇 Debugger 標籤查看&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____9HL5hHZZvt3wNtttZVTRA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">Configure Xdebug</summary></entry><entry><title type="html">關於docker compose啟動時，指定使用不同設定檔的方式</title><link href="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="關於docker compose啟動時，指定使用不同設定檔的方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker%20compose%E5%95%9F%E5%8B%95%E6%99%82,%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html">&lt;p&gt;原本一直想使用 .env 的方式載入，但一直無法成功&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;— env-file option #6170&lt;/p&gt;
@@ -56,57 +142,7 @@
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose config&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;但啟動的 Container 確實是使用不同的設定檔沒錯&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">原本一直想使用 .env 的方式載入，但一直無法成功</summary></entry><entry><title type="html">PhpStorm+Docker+PHP8+Xdebug3的設定方式</title><link href="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="PhpStorm+Docker+PHP8+Xdebug3的設定方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/nginx/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html">&lt;p&gt;Configure Xdebug&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&quot;&gt;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在本機查看 Container 裡的 PHP 資訊，確定有裝 Xdebug 3&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -ti opencart3_web_1 sh -c &quot;php -v&quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1____oVP0D4WPV7hbZsi9TdLAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定 Debug&lt;/p&gt;
-
-&lt;p&gt;⚠️ 下圖的 2 要打勾&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__2dwILtt2yA1hyubfuvT6__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定 Server，Docker Container 所使用的本機埠號和資料夾對應要設定好&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__2iUQUXqoGVqBUOOBoxfWQg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定執行設定，建立一個 PHP Web Page，選擇上面建立的 Server&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__3NVBix5eH0NsA7gtnoloGg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;啟動監聽，按下綠色蟲蟲的按鈕，選擇入口點&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__j22DQYF__HKbNX9J9In4Xzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果出現以下警告，代表 mapping 的資料夾不正確，重新設定&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__yhMC0H7ibbve5qudi__iZkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定本機和 Container 裡的資料夾對應&lt;/p&gt;
-
-&lt;p&gt;兩邊的相對位置可以不同，所以才會讓使用者視需要一個一個資料夾設定對應關係&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__J33ApfTuQMYnPE5LtLRsAQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;前台會一直轉圈圈&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__v6NLPuYk93Jc__dC8w2w25Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;透過以下按鈕進入下一步&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__73fLto3FsY0Psiz1hE8swA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;選擇 Debugger 標籤查看&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1____9HL5hHZZvt3wNtttZVTRA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">Configure Xdebug</summary></entry><entry><title type="html">微軟WSL2中Ubuntu的家目錄，存放在Windows的位置</title><link href="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="微軟WSL2中Ubuntu的家目錄，存放在Windows的位置" /><published>2021-06-23T09:00:00+08:00</published><updated>2021-06-23T09:00:00+08:00</updated><id>/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84,%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE</id><content type="html" xml:base="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html">&lt;p&gt;實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了&lt;/p&gt;
+&lt;p&gt;但啟動的 Container 確實是使用不同的設定檔沒錯&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">原本一直想使用 .env 的方式載入，但一直無法成功</summary></entry><entry><title type="html">微軟WSL2中Ubuntu的家目錄，存放在Windows的位置</title><link href="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="微軟WSL2中Ubuntu的家目錄，存放在Windows的位置" /><published>2021-06-23T09:00:00+08:00</published><updated>2021-06-23T09:00:00+08:00</updated><id>/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84,%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE</id><content type="html" xml:base="/nginx/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html">&lt;p&gt;實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/medium/1__M7oFwrkZIanu1RBVPgspLw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -504,65 +540,4 @@ vue component key random&lt;/p&gt;
 
 &lt;p&gt;狀態：不顯示明細的畫面也有顯示值了&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__gmvBP6GF1zIUAImwiqDOGw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">當「顯示明細」選擇後，按下「查詢結果」按鈕</summary></entry><entry><title type="html">Symfony整合Google登入的實作</title><link href="/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C.html" rel="alternate" type="text/html" title="Symfony整合Google登入的實作" /><published>2021-04-06T09:00:00+08:00</published><updated>2021-04-06T09:00:00+08:00</updated><id>/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C</id><content type="html" xml:base="/nginx/2021/04/06/Symfony%E6%95%B4%E5%90%88Google%E7%99%BB%E5%85%A5%E7%9A%84%E5%AF%A6%E4%BD%9C.html">&lt;p&gt;跟整合 Facebook 的方式一樣，參考以下方式&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Easily talk to an OAuth2 server for social functionality in Symfony&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://github.com/knpuniversity/oauth2-client-bundle&quot;&gt;https://github.com/knpuniversity/oauth2-client-bundle&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;Easily implement Google login with Symfony 4&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://hugo-soltys.com/blog/easily-implement-google-login-with-symfony-4&quot;&gt;https://hugo-soltys.com/blog/easily-implement-google-login-with-symfony-4&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Google 開發者介面&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://console.cloud.google.com/apis/credentials&quot; title=&quot;https://console.cloud.google.com/apis/credentials&quot;&gt;&lt;strong&gt;Google Cloud Platform&lt;/strong&gt;&lt;br /&gt;
-_Google Cloud Platform lets you build, deploy, and scale applications, websites, and services on the same infrastructure…_console.cloud.google.com&lt;/a&gt;&lt;a href=&quot;https://console.cloud.google.com/apis/credentials&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;不過使用 Google 時出現了授權錯誤&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__FbFqC4wjNi5pfwv8b0uWOg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;後來發現每一個 Google Cloud Platform 專案只能設定一個網站的 OAuth，原本的已經有別的專案使用了，所以設定的 callback 位置會造成授權錯誤&lt;/p&gt;
-
-&lt;p&gt;再建立一個新的專案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__49__keYBxR__ZzFU__lGWbaAg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;切換到新的專案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__5wnw0tKa__ncmfxfPy2X4Ug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定憑證和 OAuth 資訊&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__RSC9UqU__vpNJeNMNJ40fHg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;測試 Google 登入&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__db0r1li5FsGApb76zG3kRw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;成功了，可以選擇 Google 帳戶了&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__a2Iw4aPYo6IzaFVAGoN7jA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;登入後也可以取得資訊&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__LT7T0g8aQzfsPhZk2rXlqQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;透過 Google 註冊新建帳號也 OK&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__168iw5ypgvNhmfsxu9Ob7A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;但登出後，因為 Symfnoy 5 的router 設定可能有問題，自動被導向 en 語系了&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__eElm1xNYmJbxLdj0t5426Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;此時如果再次使用 Google 登入，就會造成授權錯誤，因為 callback 位置多了一個 en 字綴&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__gQnmkpGvgZWUVfGlD0HTPA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;把所有會用到的語系 URI 都加到授權清單中&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__P4Eo__Yeavf0aS1upVX__lXQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Nginx" /><category term="Nginx" /><summary type="html">跟整合 Facebook 的方式一樣，參考以下方式</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__gmvBP6GF1zIUAImwiqDOGw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">當「顯示明細」選擇後，按下「查詢結果」按鈕</summary></entry></feed>
