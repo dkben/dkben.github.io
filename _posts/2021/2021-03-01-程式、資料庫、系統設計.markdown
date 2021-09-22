@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "程式、資料庫、系統設計"
+subtitle: "資料表命名單數、複數的問題 singular vs. plural"
+date:   2021-03-01 09:00:00 +0800
+categories:
+tags:
+- "2021"
+---
+
+資料表命名單數、複數的問題 singular vs. plural
+
+> What does symfony recommend for database table names?
+>
+> [https://stackoverflow.com/questions/54864437/what-does-symfony-recommend-for-database-table-names](https://stackoverflow.com/questions/54864437/what-does-symfony-recommend-for-database-table-names)
+>
+> The table naming dilemma: singular vs. plural
+>
+> [https://medium.com/@fbnlsr/the-table-naming-dilemma-singular-vs-plural-dc260d90aaff](https://medium.com/@fbnlsr/the-table-naming-dilemma-singular-vs-plural-dc260d90aaff)
+
+這不是 Symfony 的問題，而是數據庫設計的問題，所以 Symfony 沒有任何推薦的建議
+
+用單數，對非英文系開發者比較簡單
+
+用複數命名資料表，仍可以使用單數的 Entity 名稱 ( 只是要手動修改 )
+
+重點是：保持一致
+
+不過，那 Route 要用單數還是複數？
+
+如果是 API 的話，複數才能符合 RESTful 規則
+
+URL 用複數表示集合，單數表示一筆資料參數也比較合理
+
+另外一個常見的設定問題是
+
+前台用戶和後台用戶，要區分 2 張資料表嗎？
+
+user 和 admin ( 有 role 欄位 )
+
+還是 user 搭配 role 資料表，此時 role 有前台、後台權限，user 資料表則是記錄前台、後台用戶
