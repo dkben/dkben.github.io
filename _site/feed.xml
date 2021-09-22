@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-22T20:02:58+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">將自己Medium Blog下載回來並轉換成Markdown格式</title><link href="/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium-Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F.html" rel="alternate" type="text/html" title="將自己Medium Blog下載回來並轉換成Markdown格式" /><published>2021-09-21T09:00:00+08:00</published><updated>2021-09-21T09:00:00+08:00</updated><id>/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium%20Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F</id><content type="html" xml:base="/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium-Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F.html">&lt;p&gt;用 npm 安裝 medium-2-md 工具&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-22T20:48:46+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">將自己Medium Blog下載回來並轉換成Markdown格式</title><link href="/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium-Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F.html" rel="alternate" type="text/html" title="將自己Medium Blog下載回來並轉換成Markdown格式" /><published>2021-09-21T09:00:00+08:00</published><updated>2021-09-21T09:00:00+08:00</updated><id>/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium%20Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F</id><content type="html" xml:base="/2021/09/21/%E5%B0%87%E8%87%AA%E5%B7%B1Medium-Blog%E4%B8%8B%E8%BC%89%E5%9B%9E%E4%BE%86%E4%B8%A6%E8%BD%89%E6%8F%9B%E6%88%90Markdown%E6%A0%BC%E5%BC%8F.html">&lt;p&gt;用 npm 安裝 medium-2-md 工具&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;https://www.npmjs.com/package/medium-2-md&lt;/p&gt;
@@ -34,57 +34,34 @@
   &lt;p&gt;medium-2-md: Convert Medium posts to markdown with front matter&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://www.gautamdhameja.com/medium-to-markdown-converter/&quot;&gt;https://www.gautamdhameja.com/medium-to-markdown-converter/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="2021" /><summary type="html">用 npm 安裝 medium-2-md 工具</summary></entry><entry><title type="html">PhpStorm+Docker+PHP8+Xdebug3的設定方式</title><link href="/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="PhpStorm+Docker+PHP8+Xdebug3的設定方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html">&lt;p&gt;Configure Xdebug&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="2021" /><summary type="html">用 npm 安裝 medium-2-md 工具</summary></entry><entry><title type="html">Found orphan containers 發現孤立容器</title><link href="/docker/2021/08/22/Found-orphan-containers-%E7%99%BC%E7%8F%BE%E5%AD%A4%E7%AB%8B%E5%AE%B9%E5%99%A8.html" rel="alternate" type="text/html" title="Found orphan containers 發現孤立容器" /><published>2021-08-22T09:00:00+08:00</published><updated>2021-08-22T09:00:00+08:00</updated><id>/docker/2021/08/22/Found%20orphan%20containers%20%E7%99%BC%E7%8F%BE%E5%AD%A4%E7%AB%8B%E5%AE%B9%E5%99%A8</id><content type="html" xml:base="/docker/2021/08/22/Found-orphan-containers-%E7%99%BC%E7%8F%BE%E5%AD%A4%E7%AB%8B%E5%AE%B9%E5%99%A8.html">&lt;p&gt;只要 docker-compose.yml 裡面有 compose, nodejs 容器就會有 orphan containers 孤立容器，我是指下圖我的專案開發環境&lt;/p&gt;
+
+&lt;p&gt;每手動執行一次指令也會產生額外的容器&lt;/p&gt;
+
+&lt;p&gt;這是發生在移除環境時的時候&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose down&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-08-22/2021-08-22-01.png&quot; alt=&quot;&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;出現 Warning 警告&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&quot;&gt;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;WARNING: Found orphan containers (psi_nodejs_1, psi_composer_1) for this project. If you removed or renamed this service in your compose file, you can run this command with the –remove-orphans flag to clean it up.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在本機查看 Container 裡的 PHP 資訊，確定有裝 Xdebug 3&lt;/p&gt;
+&lt;p&gt;發現孤立容器&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -ti opencart3_web_1 sh -c &quot;php -v&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose down --remove-orphans&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1____oVP0D4WPV7hbZsi9TdLAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2021-08-22/2021-08-22-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;設定 Debug&lt;/p&gt;
+&lt;p&gt;看來在 docker-compose 中如果沒有 always 啟動的話，就會變孤立容器&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Removing orphan container “psi_composer_1”&lt;/p&gt;
 
-&lt;p&gt;⚠️ 下圖的 2 要打勾&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__2dwILtt2yA1hyubfuvT6__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定 Server，Docker Container 所使用的本機埠號和資料夾對應要設定好&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__2iUQUXqoGVqBUOOBoxfWQg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定執行設定，建立一個 PHP Web Page，選擇上面建立的 Server&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__3NVBix5eH0NsA7gtnoloGg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;啟動監聽，按下綠色蟲蟲的按鈕，選擇入口點&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__j22DQYF__HKbNX9J9In4Xzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果出現以下警告，代表 mapping 的資料夾不正確，重新設定&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__yhMC0H7ibbve5qudi__iZkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;設定本機和 Container 裡的資料夾對應&lt;/p&gt;
-
-&lt;p&gt;兩邊的相對位置可以不同，所以才會讓使用者視需要一個一個資料夾設定對應關係&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__J33ApfTuQMYnPE5LtLRsAQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;前台會一直轉圈圈&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__v6NLPuYk93Jc__dC8w2w25Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;透過以下按鈕進入下一步&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__73fLto3FsY0Psiz1hE8swA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;選擇 Debugger 標籤查看&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1____9HL5hHZZvt3wNtttZVTRA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="2021" /><summary type="html">Configure Xdebug</summary></entry><entry><title type="html">關於docker compose啟動時，指定使用不同設定檔的方式</title><link href="/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="關於docker compose啟動時，指定使用不同設定檔的方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker%20compose%E5%95%9F%E5%8B%95%E6%99%82,%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html">&lt;p&gt;原本一直想使用 .env 的方式載入，但一直無法成功&lt;/p&gt;
+  &lt;p&gt;Removing orphan container “psi_nodejs_1”&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Docker" /><category term="Docker" /><summary type="html">只要 docker-compose.yml 裡面有 compose, nodejs 容器就會有 orphan containers 孤立容器，我是指下圖我的專案開發環境</summary></entry><entry><title type="html">關於docker compose啟動時，指定使用不同設定檔的方式</title><link href="/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="關於docker compose啟動時，指定使用不同設定檔的方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker%20compose%E5%95%9F%E5%8B%95%E6%99%82,%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/docker/2021/07/11/%E9%97%9C%E6%96%BCdocker-compose%E5%95%9F%E5%8B%95%E6%99%82-%E6%8C%87%E5%AE%9A%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%A8%AD%E5%AE%9A%E6%AA%94%E7%9A%84%E6%96%B9%E5%BC%8F.html">&lt;p&gt;原本一直想使用 .env 的方式載入，但一直無法成功&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;— env-file option #6170&lt;/p&gt;
@@ -142,7 +119,57 @@
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker compose config&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;但啟動的 Container 確實是使用不同的設定檔沒錯&lt;/p&gt;</content><author><name></name></author><category term="Docker" /><category term="Docker" /><summary type="html">原本一直想使用 .env 的方式載入，但一直無法成功</summary></entry><entry><title type="html">微軟WSL2中Ubuntu的家目錄，存放在Windows的位置</title><link href="/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="微軟WSL2中Ubuntu的家目錄，存放在Windows的位置" /><published>2021-06-23T09:00:00+08:00</published><updated>2021-06-23T09:00:00+08:00</updated><id>/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84,%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE</id><content type="html" xml:base="/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html">&lt;p&gt;實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了&lt;/p&gt;
+&lt;p&gt;但啟動的 Container 確實是使用不同的設定檔沒錯&lt;/p&gt;</content><author><name></name></author><category term="Docker" /><category term="Docker" /><summary type="html">原本一直想使用 .env 的方式載入，但一直無法成功</summary></entry><entry><title type="html">PhpStorm+Docker+PHP8+Xdebug3的設定方式</title><link href="/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="PhpStorm+Docker+PHP8+Xdebug3的設定方式" /><published>2021-07-11T09:00:00+08:00</published><updated>2021-07-11T09:00:00+08:00</updated><id>/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="/2021/07/11/PhpStorm+Docker+PHP8+Xdebug3%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F.html">&lt;p&gt;Configure Xdebug&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&quot;&gt;https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在本機查看 Container 裡的 PHP 資訊，確定有裝 Xdebug 3&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -ti opencart3_web_1 sh -c &quot;php -v&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____oVP0D4WPV7hbZsi9TdLAw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定 Debug&lt;/p&gt;
+
+&lt;p&gt;⚠️ 下圖的 2 要打勾&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2dwILtt2yA1hyubfuvT6__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定 Server，Docker Container 所使用的本機埠號和資料夾對應要設定好&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__2iUQUXqoGVqBUOOBoxfWQg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定執行設定，建立一個 PHP Web Page，選擇上面建立的 Server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__3NVBix5eH0NsA7gtnoloGg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;啟動監聽，按下綠色蟲蟲的按鈕，選擇入口點&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__j22DQYF__HKbNX9J9In4Xzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果出現以下警告，代表 mapping 的資料夾不正確，重新設定&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__yhMC0H7ibbve5qudi__iZkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;設定本機和 Container 裡的資料夾對應&lt;/p&gt;
+
+&lt;p&gt;兩邊的相對位置可以不同，所以才會讓使用者視需要一個一個資料夾設定對應關係&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__J33ApfTuQMYnPE5LtLRsAQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;前台會一直轉圈圈&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__v6NLPuYk93Jc__dC8w2w25Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;透過以下按鈕進入下一步&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__73fLto3FsY0Psiz1hE8swA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;選擇 Debugger 標籤查看&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1____9HL5hHZZvt3wNtttZVTRA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="2021" /><summary type="html">Configure Xdebug</summary></entry><entry><title type="html">微軟WSL2中Ubuntu的家目錄，存放在Windows的位置</title><link href="/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="微軟WSL2中Ubuntu的家目錄，存放在Windows的位置" /><published>2021-06-23T09:00:00+08:00</published><updated>2021-06-23T09:00:00+08:00</updated><id>/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84,%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE</id><content type="html" xml:base="/windows/2021/06/23/%E5%BE%AE%E8%BB%9FWSL2%E4%B8%ADUbuntu%E7%9A%84%E5%AE%B6%E7%9B%AE%E9%8C%84-%E5%AD%98%E6%94%BE%E5%9C%A8Windows%E7%9A%84%E4%BD%8D%E7%BD%AE.html">&lt;p&gt;實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/medium/1__M7oFwrkZIanu1RBVPgspLw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -162,67 +189,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/116126/access-wsl2ubuntu-drive-from-file-explorer.html&quot;&gt;https://docs.microsoft.com/en-us/answers/questions/116126/access-wsl2ubuntu-drive-from-file-explorer.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Windows" /><category term="Windows" /><summary type="html">實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-128-ECB</title><link href="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-128-ECB" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/mysql/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-128-ECB</id><content type="html" xml:base="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__hoLbq8__JA0TdxuZhKonWUQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;AES-128-ECB 不需要 Initialization Vector 值&lt;/p&gt;
-
-&lt;p&gt;key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__q0bV2j4hPzPw39ufLLo8Yw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// $key = hash(&quot;sha256&quot;, $AES_key);  // 不要這樣用，字串太長的話 MySQL 會另外做處理&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sha256&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$AES_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;使用 PHP 和 MySQL 進行編碼，得到一致的結果&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__0sfz9WOLSQG2zNgjx3RE__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;做 Equal 比對&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__L8AnrwO1o__Y3H__anK17Zug.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__eVwENC__R5ABuRpApwJHW5A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;做 LIKE 搜尋&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__UCYOUcSQS15I0fbsR2__J4g.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/medium/1__plgsvxhGhOpVnAIIMS2UcA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="MySQL" /><category term="MySQL" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">SA、SD 工具</title><link href="/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html" rel="alternate" type="text/html" title="SA、SD 工具" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/2021/05/03/SA%E3%80%81SD%E5%B7%A5%E5%85%B7</id><content type="html" xml:base="/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html">&lt;p&gt;最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。&lt;/p&gt;
-
-&lt;p&gt;記錄組織創意的工具&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://milanote.com/&quot; title=&quot;https://milanote.com/&quot;&gt;&lt;strong&gt;Milanote - the tool for organizing creative projects&lt;/strong&gt;&lt;br /&gt;
-_Collect everything in one place Anything you save in the Milanote app will be ready to organize as soon as you’re back…_milanote.com&lt;/a&gt;&lt;a href=&quot;https://milanote.com/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__vlUC9qbK7v4__gsJBFe__BkQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用心得：&lt;/p&gt;
-
-&lt;p&gt;非常不錯的工具，因為創意初期想法變動通常很快很大，可以馬上修正，比手繪還方便。&lt;/p&gt;
-
-&lt;p&gt;畫 UI 的工具&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.axure.com/&quot;&gt;https://www.axure.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__P__oZeyGrj515HpxJQt4LoA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用心得：&lt;/p&gt;
-
-&lt;p&gt;這應該不用特別講了，非常專業的UI工具，而且也可以發佈到雲端空間分享給同事。&lt;/p&gt;
-
-&lt;p&gt;使用 Lucid 來畫 UML 圖&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lucid.app/&quot; title=&quot;https://lucid.app/&quot;&gt;&lt;strong&gt;Log in&lt;/strong&gt;&lt;br /&gt;
-_Edit description_lucid.app&lt;/a&gt;&lt;a href=&quot;https://lucid.app/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__8Gt0xFdwEUXbLmdBrucsgg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用心得：&lt;/p&gt;
-
-&lt;p&gt;也是不錯的工具，但很快就會達到免費使用的上限。&lt;/p&gt;
-
-&lt;p&gt;如果不考慮價格的話，我會希望同時使用以上 3 個服務來完成 SA、SD 的工作。但目前打算用 Axure 來畫 UML 圖，可以省一些錢。&lt;/p&gt;</content><author><name></name></author><category term="2021" /><summary type="html">最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-256-CBC</title><link href="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-256-CBC" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/mysql/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-256-CBC</id><content type="html" xml:base="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Windows" /><category term="Windows" /><summary type="html">實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-256-CBC</title><link href="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-256-CBC" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/mysql/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-256-CBC</id><content type="html" xml:base="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-256-CBC.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/medium/1__hoLbq8__JA0TdxuZhKonWUQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -324,7 +291,67 @@ _Edit description_lucid.app&lt;/a&gt;&lt;a href=&quot;https://lucid.app/&quot;&g
 
 &lt;p&gt;像下圖就是欄位是一般的 VARCHAR，不過儲存時送進去是二進位，所以造成亂碼，此外也不一定能再取出解碼 AES 復原成原本的字串&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__IqFFYWWjh6cTLt__Osq50MQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="MySQL" /><category term="MySQL" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">Vue.js子元件部份資訊未重置問題</title><link href="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html" rel="alternate" type="text/html" title="Vue.js子元件部份資訊未重置問題" /><published>2021-04-18T09:00:00+08:00</published><updated>2021-04-18T09:00:00+08:00</updated><id>/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C</id><content type="html" xml:base="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html">&lt;p&gt;VueJS 父、子元件表單的計算總金額會一直加總的問題&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__IqFFYWWjh6cTLt__Osq50MQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="MySQL" /><category term="MySQL" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">MySQL 和 PHP AES 演算法 AES-128-ECB</title><link href="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html" rel="alternate" type="text/html" title="MySQL 和 PHP AES 演算法 AES-128-ECB" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/mysql/2021/05/03/MySQL%20%E5%92%8C%20PHP%20AES%20%E6%BC%94%E7%AE%97%E6%B3%95%20AES-128-ECB</id><content type="html" xml:base="/mysql/2021/05/03/MySQL-%E5%92%8C-PHP-AES-%E6%BC%94%E7%AE%97%E6%B3%95-AES-128-ECB.html">&lt;p&gt;注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__hoLbq8__JA0TdxuZhKonWUQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;AES-128-ECB 不需要 Initialization Vector 值&lt;/p&gt;
+
+&lt;p&gt;key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__q0bV2j4hPzPw39ufLLo8Yw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// $key = hash(&quot;sha256&quot;, $AES_key);  // 不要這樣用，字串太長的話 MySQL 會另外做處理&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sha256&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$AES_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// key 的長度會依不同演算法有不同規則，使用 AES-128-ECB 演算法時，最多 16 字元&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 PHP 和 MySQL 進行編碼，得到一致的結果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__0sfz9WOLSQG2zNgjx3RE__w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 Equal 比對&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__L8AnrwO1o__Y3H__anK17Zug.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/medium/1__eVwENC__R5ABuRpApwJHW5A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做 LIKE 搜尋&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__UCYOUcSQS15I0fbsR2__J4g.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/medium/1__plgsvxhGhOpVnAIIMS2UcA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="MySQL" /><category term="MySQL" /><summary type="html">注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB</summary></entry><entry><title type="html">SA、SD 工具</title><link href="/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html" rel="alternate" type="text/html" title="SA、SD 工具" /><published>2021-05-03T09:00:00+08:00</published><updated>2021-05-03T09:00:00+08:00</updated><id>/2021/05/03/SA%E3%80%81SD%E5%B7%A5%E5%85%B7</id><content type="html" xml:base="/2021/05/03/SA-SD%E5%B7%A5%E5%85%B7.html">&lt;p&gt;最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。&lt;/p&gt;
+
+&lt;p&gt;記錄組織創意的工具&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://milanote.com/&quot; title=&quot;https://milanote.com/&quot;&gt;&lt;strong&gt;Milanote - the tool for organizing creative projects&lt;/strong&gt;&lt;br /&gt;
+_Collect everything in one place Anything you save in the Milanote app will be ready to organize as soon as you’re back…_milanote.com&lt;/a&gt;&lt;a href=&quot;https://milanote.com/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__vlUC9qbK7v4__gsJBFe__BkQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;非常不錯的工具，因為創意初期想法變動通常很快很大，可以馬上修正，比手繪還方便。&lt;/p&gt;
+
+&lt;p&gt;畫 UI 的工具&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.axure.com/&quot;&gt;https://www.axure.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__P__oZeyGrj515HpxJQt4LoA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;這應該不用特別講了，非常專業的UI工具，而且也可以發佈到雲端空間分享給同事。&lt;/p&gt;
+
+&lt;p&gt;使用 Lucid 來畫 UML 圖&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lucid.app/&quot; title=&quot;https://lucid.app/&quot;&gt;&lt;strong&gt;Log in&lt;/strong&gt;&lt;br /&gt;
+_Edit description_lucid.app&lt;/a&gt;&lt;a href=&quot;https://lucid.app/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/medium/1__8Gt0xFdwEUXbLmdBrucsgg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用心得：&lt;/p&gt;
+
+&lt;p&gt;也是不錯的工具，但很快就會達到免費使用的上限。&lt;/p&gt;
+
+&lt;p&gt;如果不考慮價格的話，我會希望同時使用以上 3 個服務來完成 SA、SD 的工作。但目前打算用 Axure 來畫 UML 圖，可以省一些錢。&lt;/p&gt;</content><author><name></name></author><category term="2021" /><summary type="html">最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。</summary></entry><entry><title type="html">Vue.js子元件部份資訊未重置問題</title><link href="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html" rel="alternate" type="text/html" title="Vue.js子元件部份資訊未重置問題" /><published>2021-04-18T09:00:00+08:00</published><updated>2021-04-18T09:00:00+08:00</updated><id>/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C</id><content type="html" xml:base="/vuejs/2021/04/18/Vue.js%E5%AD%90%E5%85%83%E4%BB%B6%E9%83%A8%E4%BB%BD%E8%B3%87%E8%A8%8A%E6%9C%AA%E9%87%8D%E7%BD%AE%E5%95%8F%E9%A1%8C.html">&lt;p&gt;VueJS 父、子元件表單的計算總金額會一直加總的問題&lt;/p&gt;
 
 &lt;p&gt;這是一個看起來很簡單的功能&lt;/p&gt;
 
@@ -425,59 +452,7 @@ vue component key random&lt;/p&gt;
   &lt;p&gt;In Vue.js, how to disable caching of computed properties?&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties&quot;&gt;https://stackoverflow.com/questions/32106193/in-vue-js-how-to-disable-caching-of-computed-properties&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">VueJS 父、子元件表單的計算總金額會一直加總的問題</summary></entry><entry><title type="html">Vue.js parse html string 在Vue.js中轉換HTML標籤</title><link href="/vuejs/2021/04/10/Vue.js-parse-html-string-%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4.html" rel="alternate" type="text/html" title="Vue.js parse html string 在Vue.js中轉換HTML標籤" /><published>2021-04-10T09:00:00+08:00</published><updated>2021-04-10T09:00:00+08:00</updated><id>/vuejs/2021/04/10/Vue.js%20parse%20html%20string%20%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4</id><content type="html" xml:base="/vuejs/2021/04/10/Vue.js-parse-html-string-%E5%9C%A8Vue.js%E4%B8%AD%E8%BD%89%E6%8F%9BHTML%E6%A8%99%E7%B1%A4.html">&lt;p&gt;有一個屬性 isPay ( 值為字串 0, 1 ) 需要特別判斷&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__upb4nirvNLWpkdBLdp3RSw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;要用 bootstrap 4 的 badge 做效果&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://getbootstrap.com/docs/5.0/components/badge/&quot;&gt;https://getbootstrap.com/docs/5.0/components/badge/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__DRNEyqJrxgHpkcIYnIBKQQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;但執行後直接顯示 HTML&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__KE6VY0sElvBkRSDkuy5hIg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;將原本&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;付款狀態：{ { order.isPay } }&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;改為&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;付款狀態：&amp;lt;span v-html=&quot;order.isPay&quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;成功顯示 badge 了&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/medium/1__lF3f__hk3w47OXXRLJUusjg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;關鍵字&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vue parse html string&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;參考&lt;/p&gt;
-
-&lt;p&gt;對我而言，這個有效&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“vue parse html” Code Answer&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://www.codegrepper.com/code-examples/html/vue+parse+html&quot;&gt;https://www.codegrepper.com/code-examples/html/vue+parse+html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;使用 3 個括號對我而言會編譯失敗&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;convert string to Dom in vuejs&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs&quot;&gt;https://stackoverflow.com/questions/38428220/convert-string-to-dom-in-vuejs&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;Reintroduce Triple Curly Braces { { { } } } as a v-html alternative #7431&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://github.com/vuejs/vue/issues/7431&quot;&gt;https://github.com/vuejs/vue/issues/7431&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">有一個屬性 isPay ( 值為字串 0, 1 ) 需要特別判斷</summary></entry><entry><title type="html">Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法</title><link href="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html" rel="alternate" type="text/html" title="Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法" /><published>2021-04-10T09:00:00+08:00</published><updated>2021-04-10T09:00:00+08:00</updated><id>/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8,%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95</id><content type="html" xml:base="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html">&lt;p&gt;當「顯示明細」選擇後，按下「查詢結果」按鈕&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="VueJs" /><category term="VueJs" /><summary type="html">VueJS 父、子元件表單的計算總金額會一直加總的問題</summary></entry><entry><title type="html">Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法</title><link href="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html" rel="alternate" type="text/html" title="Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法" /><published>2021-04-10T09:00:00+08:00</published><updated>2021-04-10T09:00:00+08:00</updated><id>/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8,%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95</id><content type="html" xml:base="/vuejs/2021/04/10/Vue.js%E7%88%B6%E5%AD%90%E5%85%83%E4%BB%B6%E5%82%B3%E9%81%9E%E5%8F%83%E6%95%B8-%E4%BD%86%E7%95%AB%E9%9D%A2%E6%B2%92%E6%9C%89%E9%A1%AF%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95.html">&lt;p&gt;當「顯示明細」選擇後，按下「查詢結果」按鈕&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/medium/1__0qSQNUa__NzanRPhHrgjLyA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
