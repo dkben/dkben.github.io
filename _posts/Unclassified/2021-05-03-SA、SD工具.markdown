@@ -4,9 +4,9 @@ title:  "SA、SD 工具"
 subtitle: "最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System
 Designer)，以下介紹一些我覺得不錯的工具"
 date:   2021-05-03 09:00:00 +0800
-categories:
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 最近新的 Site project 需要做 SA 系統分析(System Analyst) 和 SD 系統設計(System Designer)，以下介紹一些我覺得不錯的工具。

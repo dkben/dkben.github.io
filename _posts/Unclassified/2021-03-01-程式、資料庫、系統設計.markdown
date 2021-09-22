@@ -3,9 +3,9 @@ layout: post
 title:  "程式、資料庫、系統設計"
 subtitle: "資料表命名單數、複數的問題 singular vs. plural"
 date:   2021-03-01 09:00:00 +0800
-categories:
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 資料表命名單數、複數的問題 singular vs. plural

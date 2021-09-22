@@ -3,9 +3,9 @@ layout: post
 title:  "進銷存SaaS服務開發筆記"
 subtitle: "怎麼開始的？"
 date:   2021-02-28 09:00:00 +0800
-categories: 
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 怎麼開始的？

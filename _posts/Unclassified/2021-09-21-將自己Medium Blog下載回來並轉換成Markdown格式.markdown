@@ -3,9 +3,9 @@ layout: post
 title:  "將自己Medium Blog下載回來並轉換成Markdown格式"
 subtitle: "改用GitHub Pages"
 date:   2021-09-21 09:00:00 +0800
-categories:
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 用 npm 安裝 medium-2-md 工具

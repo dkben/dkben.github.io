@@ -3,9 +3,9 @@ layout: post
 title:  "PhpStorm+Docker+PHP8+Xdebug3的設定方式"
 subtitle: "Configure Xdebug"
 date:   2021-07-11 09:00:00 +0800
-categories:
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 Configure Xdebug

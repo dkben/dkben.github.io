@@ -3,9 +3,9 @@ layout: post
 title:  "寫不公開的技術筆記"
 subtitle: "目前開發者如果遇到問題，只要知道問題點在那裡，會下關鍵字，網路上應該都找的到解答"
 date:   2021-02-28 09:00:00 +0800
-categories: 
+categories: Unclassified
 tags:
-- "2021"
+- ""
 ---
 
 寫不公開的技術筆記
