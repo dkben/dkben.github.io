@@ -5,7 +5,7 @@ pipeline {
   }
   parameters {
     choice(name: 'APP_VERSION', choices: ['TEST', 'PROD'], description: '要佈署到那裡？(w3 / digital-ocean)')
-    string(name: 'VM_NAME', defaultValue: 'web5', description: '專案容器名稱')
+    string(name: 'VM_NAME', defaultValue: 'portfolio-hsuweni-info', description: '專案容器名稱')
     string(name: 'GIT_REPO', defaultValue: 'git@github.com:dkben/dkben.github.io.git', description: '專案來源')
     string(name: 'TEST_BRANCH', defaultValue: 'main', description: '測試機使用分支')
     string(name: 'TEST_VM_PORT', defaultValue: '40006', description: '測試機容器埠號')
