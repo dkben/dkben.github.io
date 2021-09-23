@@ -1,0 +1,89 @@
+---
+layout: post
+title:  "用JS搜尋及變更頁面內容"
+subtitle: "不修改邏輯，純綷用JavaScript修改顯示效果"
+date:   2021-09-22 09:00:00 +0800
+categories: JavaScript
+tags:
+- "JavaScript"
+---
+
+前台的效果如下，一個頁面裡有很多編輯器，且每一頁的編輯器上下區塊不同
+
+![Untitled](/images/2021-09-22/2021-09-22-01.png){:width="800px"}
+
+PM 希望在後台可以針對不同的頁面
+
+![Untitled](/images/2021-09-22/2021-09-22-02.png){:width="800px"}
+
+顯示前台大致上的樣式，讓客戶編輯時比較清楚位置
+
+![Untitled](/images/2021-09-22/2021-09-22-03.png){:width="800px"}
+
+首先要說明的是這個專案的 cp_information_description 有被修改過
+增加了額外的 description 欄位
+
+```yaml
+content:
+  - '/image/extra/admin_information/1-1.png'
+  - description
+  - '/image/extra/admin_information/1-2.png'
+```
+
+全部的程式都在這裡完成
+修改 app/admin/view/template/catalog/information_form.tpl
+
+程式碼說明：
+最前面的 PHP 取得目前編輯頁面的 id 和讀取 Yaml 設定檔，準備丟給下面的 JS 做效果
+
+```php
+<?php
+// 2021-09-22 Ben: 讀取頁面設定檔，前端可依陣列設定欄位順序，及安插其它內容-start
+
+use Symfony\Component\Yaml\Yaml;
+
+$extra_sort = [];
+
+if ($id) {
+    // 取得頁面編輯設定檔
+    $file = ROOT . '../config/extra/admin_information/' . $id . '.yml';
+
+    if (!file_exists($file)) {
+        die('Warning! Not found extra/admin_information/id.yml file!');
+    }
+
+    $extra = Yaml::parseFile($file);
+    $extra_sort = json_encode($extra['content']);
+}
+?>
+```
+
+然後透過下面的 JS 做效果
+
+```php
+<script>
+    /**
+     * Ben: 2021-09-22
+     * 透過設定檔，決定每一個 CKEditor 的上、下額外顯示區塊
+     */
+    $(function () {
+        let content_sort = <?= json_encode($extra_sort)?>;
+
+        content_sort.forEach(function (item, index) {
+            if (item === 'description') {
+                let before = content_sort[index - 1];
+                if (before) {
+                    $('<div><img src="' + before + '" width="100%"/></div>').
+                    insertBefore($("textarea[name='localization[1][description]").parents('.form-group'));
+                }
+
+                let after = content_sort[index + 1];
+                if (after) {
+                    $('<div><img src="' + after+ '" width="100%"/></div>').
+                    insertAfter($("textarea[name='localization[1][description]").parents('.form-group'));
+                }
+            }
+        });
+    })
+</script>
+```
