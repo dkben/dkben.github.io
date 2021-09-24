@@ -12,11 +12,11 @@ pipeline {
     string(name: 'TEST_VM_DIR', defaultValue: '/home/ben/projects/portfolio-hsuweni-info', description: '測試機容器資料夾')
   }
   stages {
-    stage('Checkout') {
-      steps {
-        git(url: GIT_REPO, branch: TEST_BRANCH)
-      }
-    }
+//     stage('Checkout') {
+//       steps {
+//         git(url: GIT_REPO, branch: TEST_BRANCH)
+//       }
+//     }
 
     stage('Deployment') {
       parallel {
