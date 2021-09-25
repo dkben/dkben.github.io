@@ -1,8 +1,10 @@
 pipeline {
   agent any
+
   options {
     timeout(time: 10, unit: 'MINUTES')
   }
+
   parameters {
     choice(name: 'APP_VERSION', choices: ['TEST', 'PROD'], description: '要佈署到那裡？(w3 / digital-ocean)')
     string(name: 'VM_NAME', defaultValue: 'portfolio-hsuweni-info', description: '專案容器名稱')
@@ -11,12 +13,68 @@ pipeline {
     string(name: 'TEST_VM_PORT', defaultValue: '40006', description: '測試機容器埠號')
     string(name: 'TEST_VM_DIR', defaultValue: '/home/ben/projects/portfolio-hsuweni-info', description: '測試機容器資料夾')
   }
+
   stages {
-//     stage('Checkout') {
-//       steps {
-//         git(url: GIT_REPO, branch: TEST_BRANCH)
-//       }
-//     }
+    stage('Checkout') {
+      steps {
+        git(url: GIT_REPO, branch: TEST_BRANCH)
+      }
+    }
+
+    stage('UnitTest') {
+      parallel {
+        stage('PHP 7.3') {
+          agent {
+            docker {
+              label 'master'
+              image 'allebb/phptestrunner-73:latest'
+              args '-u root:sudo'
+              // Run the container on the node specified at the top-level of the Pipeline, in the same workspace, rather than on a new node entirely:
+              reuseNode true
+            }
+          }
+          steps {
+            echo 'Running PHP 7.3 tests...'
+            println env.WORKSPACE
+            //             sh 'php -v'
+            //             echo 'Installing Composer'
+            //             sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer'
+            //             echo 'Installing project composer dependencies...'
+            //             sh 'cd $WORKSPACE && composer install --no-progress'
+            //             echo 'Running PHPUnit tests...'
+            //             sh 'php $WORKSPACE/vendor/bin/phpunit --coverage-html $WORKSPACE/report/clover --coverage-clover $WORKSPACE/report/clover.xml --log-junit $WORKSPACE/report/junit.xml'
+            //             sh 'chmod -R a+w $PWD && chmod -R a+w $WORKSPACE'
+            //             junit 'report/*.xml'
+          }
+        }
+
+        stage('PHP 7.4') {
+          agent {
+            docker {
+              label 'master'
+              image 'allebb/phptestrunner-74:latest'
+              args '-u root:sudo'
+              // Run the container on the node specified at the top-level of the Pipeline, in the same workspace, rather than on a new node entirely:
+              reuseNode true
+            }
+          }
+          steps {
+            echo 'Running PHP 7.4 tests...'
+            println env.WORKSPACE
+            //             sh 'php -v'
+            //             echo 'Installing Composer'
+            //             sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer'
+            //             echo 'Installing project composer dependencies...'
+            //             sh 'cd $WORKSPACE && composer install --no-progress'
+            //             echo 'Running PHPUnit tests...'
+            //             sh 'php $WORKSPACE/vendor/bin/phpunit --coverage-html $WORKSPACE/report/clover --coverage-clover $WORKSPACE/report/clover.xml --log-junit $WORKSPACE/report/junit.xml'
+            //             sh 'chmod -R a+w $PWD && chmod -R a+w $WORKSPACE'
+            //             junit 'report/*.xml'
+          }
+        }
+
+      }
+    }
 
     stage('Deployment') {
       parallel {
