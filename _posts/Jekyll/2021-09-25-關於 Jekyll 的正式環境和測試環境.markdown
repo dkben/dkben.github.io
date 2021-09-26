@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "關於 Jekyll 的正式環境和測試環境"
+subtitle: "不同環境使用不同設定檔"
+date:   2021-09-25 09:00:00 +0800
+categories: Jekyll
+tags:
+- "Jekyll"
+---
+
+在正式機上建置時，自動使用 _config.yml
+
+`jekyll build`
+
+檔案 _config.yml 第一行加入
+
+`environment: production`
+
+在測試機建置時，指定使用 _config_dev.yml ( 這個檔案是自己建立 )
+
+`jekyll build --config _config_dev.yml`
+
+在測試機模擬時，指定使用 _config_dev.yml ( 這個檔案是自己建立 )
+
+`jekyll serve --watch --drafts --incremental --config _config_dev.yml`
+
+檔案 _config_dev.yml 第一行加入
+
+`environment: development`
+
+> 參考
+>
+> How to build Jekyll project production with Windows command line
+> 
+> [https://stackoverflow.com/questions/54009824/how-to-build-jekyll-project-production-with-windows-command-line](https://stackoverflow.com/questions/54009824/how-to-build-jekyll-project-production-with-windows-command-line)
+>
+> Your prod environment should run jekyll build which automatically uses _config.yml. Your dev environment should run jekyll <command> --config _config.yml,_config_dev.yml. In the Jekyll config docs, "Settings in later [config] files override settings in earlier files." So, you can set the variable in prod and dev config files and use --config _config.yml,_config_dev.yml to set the variable in dev.

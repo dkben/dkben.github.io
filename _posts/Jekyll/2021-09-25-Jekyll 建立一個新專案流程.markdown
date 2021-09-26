@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Jekyll 建立一個新專案流程"
+subtitle: "環境為 MacOS"
+date:   2021-09-25 09:00:00 +0800
+categories: Jekyll
+tags:
+- "Jekyll"
+---
+
+進入專案資料夾中，初始化專案，產生 Gemfile 檔案
+
+`bundle init`
+
+修改 Gemfile 檔案，加入
+
+`gem "jekyll"`
+
+執行安裝
+
+`bundle install`
+
+查看安裝的套件
+
+`bundle list`
+
+執行建置，會產生 _site 資料夾
+
+`jekyll build`
+
+執行開發即時模擬時出現 cannot load such file -- webrick (LoadError) 訊息
+
+`jekyll serve --trace`
+
+> /Users/ben/.gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require’: cannot load such file -- webrick (LoadError)
+
+安裝 webrick ( Gemfile 也會被修改 )
+
+`bundle add webrick`
+
+再執行一次模擬
+
+`jekyll serve --trace`
+
+出現網站了
+
+![Untitled](/images/2021-09-25/2021-09-25-01.png)
+
+如果有想要排除的檔案或是資料夾，建立另外一個檔案 _config.yml
+
+```yaml
+title: 網站名稱
+email: test@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
+exclude:
+  - Jenkins
+```
+
+然後重新啟動 jekyll 模擬或建置
