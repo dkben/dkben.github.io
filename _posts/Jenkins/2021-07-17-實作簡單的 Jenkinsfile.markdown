@@ -49,5 +49,4 @@ pipeline {
 
 > 官方文件
 > 
-> [https://www.jenkins.io/zh/doc/book/pipeline/jenkinsfile/](使用 Jenkinsfile)
-> 
+> [使用 Jenkinsfile](https://www.jenkins.io/zh/doc/book/pipeline/jenkinsfile/)
