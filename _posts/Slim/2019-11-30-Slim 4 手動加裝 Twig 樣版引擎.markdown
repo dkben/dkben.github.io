@@ -1,0 +1,168 @@
+---
+layout: post
+title:  "Slim 4 手動加裝 Twig 樣版引擎"
+subtitle: "Slim 也可以是 MVC"
+date:   2019-11-30 09:00:00 +0800
+categories: Slim
+tags:
+- "Slim"
+---
+
+以下記錄手動安裝 Twig 樣版引擎的步驟
+
+安裝套件
+
+`composer require slim/twig-view`
+
+基本設定
+
+建立一個 Twig 樣版 Middleware 中間層
+
+這個中間層主要是在 DI 容器中註解 Twig 服務
+
+![Untitled](/images/2019-11-30/2019-11-30-01.png)
+
+src/Middleware/TwigMiddleware.php
+
+![Untitled](/images/2019-11-30/2019-11-30-02.png){:width="800px"}
+
+---
+
+在 BaseRouter 中執行 Twig Middleware 中間層
+
+在這裡指定樣版存放的路徑和快取設定等等
+
+> [https://twig.symfony.com/doc/3.x/api.html](https://twig.symfony.com/doc/3.x/api.html)
+
+src/Router/BaseRouter.php
+
+![Untitled](/images/2019-11-30/2019-11-30-03.png){:width="800px"}
+
+設定 Twig 樣版快取
+
+```php
+// 正式環境時使用快取
+$twig = new Twig($this->config['view']['path'], ['cache' => $this->config['view']['cache']]);
+```
+
+執行時在就會在指定位置建立 Twig 樣版快取
+
+![Untitled](/images/2019-11-30/2019-11-30-04.png)
+
+如果要禁用快取，將 setting 的 cache 設定為 false
+
+```php
+// 開發時禁用快取
+$twig = new Twig($this->config['view']['path'], ['cache' => false]);
+```
+
+---
+
+設定 MVC 路由
+
+在 MyRouter 中建立 MVC 所使用的路由，下圖為 /web/
+
+src/Router/MyRouter.php
+
+```php
+$this->prefix = '/api/v1';  // API
+
+$this->webPrefix = '/web';  // MVC
+```
+
+進入 MVC 路由後，由負責的 Class 處理業務邏輯
+
+![Untitled](/images/2019-11-30/2019-11-30-05.png){:width="800px"}
+
+建立 MVC 所使用的 Controller Class，名稱不一定要叫 Controller，這裡只是用來方便區分是否為 API 或 MVC
+
+![Untitled](/images/2019-11-30/2019-11-30-06.png)
+
+用來處理邏輯，太複雜或可重用的仍要抽離到 Service 或其它地方
+
+src/Controller/HelloWorldController.php
+
+![Untitled](/images/2019-11-30/2019-11-30-07.png){:width="800px"}
+
+使用的樣版放置在 templates 資料夾裡面，該樣版路徑由 BaseRouter 中設定
+
+![Untitled](/images/2019-11-30/2019-11-30-08.png)
+
+將 css, js, images 等資料，放在 public / asset / 裡面
+
+![Untitled](/images/2019-11-30/2019-11-30-09.png)
+
+樣版中使用到的 css, js 等檔案，路徑需要以 public 為起始路徑，因為不管是 API 還是 MVC，入口點位置都是 public / index.php
+
+templates/frontend/home.html.twig
+
+![Untitled](/images/2019-11-30/2019-11-30-10.png){:width="800px"}
+
+執行 Slim4
+
+`php -S 127.0.0.1:8401 -t public/`
+
+進入 http://127.0.0.1:8401/web/ 路由，可以看到相關頁面
+
+![Untitled](/images/2019-11-30/2019-11-30-11.png){:width="800px"}
+
+---
+
+注意事項
+
+在 MyRouter 的 MVC 路由設定中，不可以跟 public 裡靜態資料夾同名，否則將會出現路由混亂的狀態而顯示找不到路由
+
+src/Router/MyRouter.php
+
+```php
+// MVC 路由
+
+$this->app->get($this->webPrefix . '/', HelloWorldController::class);
+```
+
+例如 public 裡面有 asset, upload 資料夾名稱，在 MyRouter 中就不可以有這 2 個名稱的路由
+
+![Untitled](/images/2019-11-30/2019-11-30-12.png)
+
+---
+
+注意事項
+
+開發時如果發現，更新了樣版資料，但刷新頁面時並沒有變換，是因為系統使用快取的原因
+
+![Untitled](/images/2019-11-30/2019-11-30-13.png){:width="800px"}
+
+![Untitled](/images/2019-11-30/2019-11-30-16.png)
+
+先砍掉 twig-cache 裡面所有檔案
+
+![Untitled](/images/2019-11-30/2019-11-30-15.png)
+
+開發時暫時先禁用快取
+
+src/Router/BaseRouter.php
+
+```php
+// $twig = new Twig($this->config['view']['path'], ['cache' => $this->config['view']['cache']]);
+
+$twig = new Twig($this->config['view']['path'], ['cache' => false]);
+```
+
+再次刷新就可以看到新的頁面了
+
+![Untitled](/images/2019-11-30/2019-11-30-16.png)
+
+系統資料夾中也沒有建立快取檔案
+
+![Untitled](/images/2019-11-30/2019-11-30-17.png)
+
+---
+
+注意事項
+
+這個手工框架只適合小型 API 和小部份 MVC 頁面的建立
+
+如果要建立大量 MVC 頁面，還是使用 Symfony 會比較方便，因為有完整的 Form 元件可以使用
+
+
+
