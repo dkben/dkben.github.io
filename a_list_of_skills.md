@@ -1,10 +1,8 @@
 ---
 layout: default
 title: 專業技能
+subtitle: "A list of skills"
 ---
-# A list of skills
-
-專業技能
 
 我自己定位是技術通才，有缺什麼就學什麼的人...
 
