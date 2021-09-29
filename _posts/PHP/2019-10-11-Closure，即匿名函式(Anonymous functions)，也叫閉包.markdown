@@ -31,7 +31,7 @@ $greet = function() use ($name) {
 $greet();
 ```
 
-![Untitled](/images/2019-10-11/2019-10-11-01.png)
+![Untitled](/images/2019-10-11/2019-10-11-02.png)
 
 注意，如果這樣寫，會導致語法錯誤，盡管看起來很合理...
 
@@ -54,4 +54,4 @@ $greet = function() use ($name, $ben) {
 $greet();
 ```
 
-![Untitled](/images/2019-10-11/2019-10-11-01.png)
+![Untitled](/images/2019-10-11/2019-10-11-03.png)
