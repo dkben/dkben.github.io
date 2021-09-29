@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Tag: PHP"
+tags:
+- "PHP"
+---
+
+<ul>
+    {% for post in site.tags.PHP %}
+    <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {{ post.excerpt }}
+        <small class="post-date">{{ post.date | date_to_string }}</small>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
