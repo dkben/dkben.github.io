@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "使用外部工具 ngrok 來遠端代表本機開發環境，取得 SSL 域名效果"
+subtitle: "開發工具"
+date:   2021-06-15 09:00:00 +0800
+categories: Tool
+tags:
+- "Tool"
+---
+
+主因是學習 Laravel 框架時，使用 sail 工具啟動大量的 docker 環境
+
+但目前 sail 不支援 SSL
+
+所以變成要另外用外部工具來完成 SSL 的開發環境
+
+使用方式
+
+到有 ngrok 檔案的目錄，輸入要代理的埠號 ( 虛擬機要先開 )
+
+```shell
+./ngrok http 20082
+```
+
+然後會出現
+
+![Untitled](/images/2021-06-15/2021-06-15-01.png){:width="600px"}
+
+![Untitled](/images/2021-06-15/2021-06-15-02.png){:width="600px"}
+
+變成這樣
+
+![Untitled](/images/2021-06-15/2021-06-15-03.png){:width="600px"}
+
+連本機 hosts 都不用設定
+
+原理應該是把 ngrok 當作是遠端反向代理，代理自己開發機上的本地專案
+
+所以用別的裝置也看的到，自己本機開發機的專案
+
+![Untitled](/images/2021-06-15/2021-06-15-04.png){:width="300px"}
+
+2021-07-06 後來發現有時候速度很慢，應該是免費版本的關係...
+
+![Untitled](/images/2021-06-15/2021-06-15-05.png){:width="600px"}
+
+> Public URLs for exposing your local web server.
+>
+> [https://ngrok.com/](https://ngrok.com/)
