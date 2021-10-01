@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "實作 List 生成器"
+subtitle: "使用 Symfony"
+date:   2021-01-28 09:00:00 +0800
+categories: Symfony
+tags:
+- "Symfony"
+---
+
+首先針對每一個 Entity 列表頁面建立 Yaml 檔案
+
+每一組設定代表一個 Column，對應到 Entity 的屬性
+
+⚠️ 注意 Entity 裡面要有相對應的 get 方法 ( Entity 是無法直接取得屬性的 )
+
+![Untitled](/images/2021-01-28/2021-01-28-01.png){:width="800px"}
+
+Entity 的 Repository 列表為 data，取出每一列為 row
+
+然後由 Yaml 取得 Columns 設定，倒出來後取得 name, column
+
+原本打算組合 2 個欄位，動態組合出 row.username, row.email… 等等
+
+![Untitled](/images/2021-01-28/2021-01-28-02.png){:width="800px"}
+
+但會變成無法直接操作 Entity 屬性，而不是透過 getUsername( ) 或 getEmail( )，所以會被拒絕
+
+![Untitled](/images/2021-01-28/2021-01-28-03.png){:width="800px"}
+
+改用以下 Twig 的方法，組合一個 method 名稱，然後傳入 attribute ( ) 方法
+
+明確的傳入每一筆 row 資料，並使用組合出來的 method 方法 ( getUsername, getEmail...等等 )
+
+![Untitled](/images/2021-01-28/2021-01-28-04.png){:width="800px"}
+
+這樣就可以根據 Yaml 及 Entity 的 Repository 動態的製作一個 Table
+
+![Untitled](/images/2021-01-28/2021-01-28-05.png){:width="800px"}
