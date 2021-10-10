@@ -1,6 +1,9 @@
 toc:
   - title: Portfolio / 作品集
     subfolderitems:
+      - name: 台灣工商名錄-SSG版本
+        link: /portfolio/free_business_directory.html
+        target: _self
       - name: SaaS服務-影音網站系統
         link: /portfolio/saas_video_streaming.html
         target: _self
