@@ -10,7 +10,7 @@ subtitle: "A list of skills"
 
 目前喜歡用 Symfony5 開發，用 ORM Code First 方式，Fake DataFixtures 填充。
 
-也會視需求使用 Python 寫一些自動化的小工具或轉檔、資料庫工具。
+也會視需求使用 Python 寫一些自動化的小工具或轉檔、資料庫工具，有使用 Flask 和 FastAPI 的專案。
 
 前端技術除了 JS 外，也可以開發 VueJS，整合 Webpack 到 MVC 框架、或直接前後分離開發。
 
@@ -27,3 +27,19 @@ Git, Composer, Npm, Yarn 基本操作沒問題。
 目前公司有提供完整的 UI 及 EA 圖、美術設計師的設計切版等資源，所以了解現代開發的流程。
 
 雲端主機目前使用 AWS 和 GCE，基本操作沒問題，不過目前比較喜歡自己用 Raspberry Pi 把 Server 架在家裡。
+
+---
+
+### 自己的筆記系統
+
+對於工作上有幫助或有興趣的東西會做詳細的學習記錄，一般記錄使用 Evernote
+
+![](/images/a_list_of_skills/001.png){:width="800px"}
+
+需要詳細記錄時使用 Notion 或是 HackMD 服務
+
+![](/images/a_list_of_skills/002.png){:width="800px"}
+
+<br>
+<br>
+<br>

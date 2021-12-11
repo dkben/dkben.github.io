@@ -1,6 +1,9 @@
 toc:
   - title: Portfolio / 作品集
     subfolderitems:
+      - name: 台灣工商名錄-Flask版本
+        link: /portfolio/free_business_directory_flask.html
+        target: _self
       - name: 台灣工商名錄-SSG版本
         link: /portfolio/free_business_directory.html
         target: _self
@@ -27,6 +30,9 @@ toc:
         target: _blank
       - name: 年菜預購平台
         link: /portfolio/new_year_food_pre_order.html
+        target: _self
+      - name: OpenCart 2 改造成框架
+        link: /portfolio/opencart2_to_framework.html
         target: _self
   - title: Tool / 工具
     subfolderitems:
