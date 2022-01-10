@@ -4,6 +4,7 @@ title:  "Vue.js子元件部份資訊未重置問題"
 subtitle: "Vue.js父、子元件表單的計算總金額會一直加總的問題"
 date:   2021-04-18 09:00:00 +0800
 categories: VueJs
+meta_description: "Vue.js子元件部份資訊未重置問題"
 tags:
 - "VueJs"
 ---

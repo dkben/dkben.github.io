@@ -4,6 +4,7 @@ title:  "MySQL 和 PHP AES 演算法 AES-128-ECB"
 subtitle: "注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB"
 date:   2021-05-03 09:00:00 +0800
 categories: MySQL
+meta_description: "MySQL 和 PHP AES 演算法 AES-128-ECB，注意 MySQL 5.7 的 AES 加密演算法預設值是 AES-128-ECB"
 tags:
 - "MySQL"
 ---

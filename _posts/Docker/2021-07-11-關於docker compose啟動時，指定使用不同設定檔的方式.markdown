@@ -4,6 +4,7 @@ title:  "關於docker compose啟動時，指定使用不同設定檔的方式"
 subtitle: "原本一直想使用 .env 的方式載入，但一直無法成功"
 date:   2021-07-11 09:00:00 +0800
 categories: Docker
+meta_description: "無法在 docker-compose.yml 中針對不同環境啟動使用不同的 .env，但可以使用不同 docker-compose.yml 設定檔啟動"
 tags:
 - "Docker"
 ---

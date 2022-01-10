@@ -4,6 +4,7 @@ title:  "中華電信ADSL小烏龜登入工程師模式"
 subtitle: "因為增加了 Raspberry Pi，需要設定埠號轉發，使用之前的帳密登入中華電信ADSL小烏龜時…"
 date:   2021-03-28 09:00:00 +0800
 categories: Unclassified
+meta_description: "中華電信ADSL小烏龜登入工程師模式，因為增加了 Raspberry Pi，需要設定埠號轉發，使用之前的帳密登入中華電信ADSL小烏龜時發現原本的功能選項都不見了，只剩下基本的設定而以"
 tags:
 - ""
 ---

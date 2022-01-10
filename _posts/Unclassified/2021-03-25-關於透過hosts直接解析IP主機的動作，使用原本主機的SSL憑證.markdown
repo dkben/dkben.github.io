@@ -4,6 +4,7 @@ title:  "關於透過/etc/hosts直接解析IP主機的動作，使用原本主�
 subtitle: "有一台主機A有設定SSL，後面增加內網5台主機 B, C, D, E, F (API主機) 沒有SSL"
 date:   2021-03-25 09:00:00 +0800
 categories: Unclassified
+meta_description: "關於透過/etc/hosts直接解析IP主機的動作，使用原本主機的SSL憑證"
 tags:
 - ""
 ---

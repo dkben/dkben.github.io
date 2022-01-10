@@ -4,6 +4,7 @@ title:  "Symfony 取得URL 上的Route參數"
 subtitle: "可以使用以下方式取得 Route 參數"
 date:   2021-03-10 09:00:00 +0800
 categories: Symfony
+meta_description: "Symfony 取得 URL 上的 Route 參數"
 tags:
 - "Symfony"
 ---

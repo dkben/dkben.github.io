@@ -4,6 +4,7 @@ title:  "用JS搜尋及變更頁面內容"
 subtitle: "不修改邏輯，純綷用JavaScript修改顯示效果"
 date:   2021-09-22 09:00:00 +0800
 categories: JavaScript
+meta_description: "用JS搜尋及變更頁面內容，不修改邏輯，純綷用JavaScript修改顯示效果"
 tags:
 - "JavaScript"
 ---

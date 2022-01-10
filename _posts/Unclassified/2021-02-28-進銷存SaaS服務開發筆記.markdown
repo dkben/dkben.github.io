@@ -4,6 +4,7 @@ title:  "進銷存SaaS服務開發筆記"
 subtitle: "怎麼開始的？"
 date:   2021-02-28 09:00:00 +0800
 categories: Unclassified
+meta_description: "進銷存SaaS服務開發筆記"
 tags:
 - ""
 ---

@@ -4,6 +4,7 @@ title:  "Vagrant Image 的匯出匯入"
 subtitle: "某些環境不容易重現時，可以把現有的虛擬機整個匯出，然後使用在別的環境"
 date:   2021-03-05 09:00:00 +0800
 categories: Vagrant
+meta_description: "Vagrant Image 的匯出匯入，適用於某些環境不容易重現時，可以把現有的虛擬機整個匯出，然後使用在別的環境"
 tags:
 - "Vagrant"
 ---

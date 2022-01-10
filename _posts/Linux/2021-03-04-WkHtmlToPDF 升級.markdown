@@ -5,6 +5,7 @@ subtitle: "客戶正式機為 Windows Server WkHtmlToPdf 版本為 0.12.5，開�
 版本為 0.12.4，造成執行時出現異常"
 date:   2021-03-04 09:00:00 +0800
 categories: Linux
+meta_description: "需要將 WkHtmlToPDF 升級。客戶正式機為 Windows Server WkHtmlToPdf 版本為 0.12.5，開發機為 Ubuntu 18.04 虛擬機 WkHtmlToPdf 版本為 0.12.4，造成執行時出現異常"
 tags:
 - "Linux"
 ---

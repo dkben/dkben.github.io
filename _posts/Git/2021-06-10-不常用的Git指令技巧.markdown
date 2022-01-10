@@ -4,6 +4,7 @@ title:  "不常用的 Git 指令技巧"
 subtitle: "不是很常用的指令"
 date:   2020-06-10 09:00:00 +0800
 categories: Git
+meta_description: "一些不常用的 Git 指令技巧"
 tags:
 - "Git"
 ---

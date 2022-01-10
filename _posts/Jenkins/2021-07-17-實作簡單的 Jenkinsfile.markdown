@@ -4,6 +4,7 @@ title:  "實作簡單的 Jenkinsfile"
 subtitle: "使用 Pipeline Declarative Style 聲明式"
 date:   2021-07-17 09:00:00 +0800
 categories: Jenkins
+meta_description: "實作簡單的 Jenkinsfile，使用 Pipeline Declarative Style 聲明式"
 tags:
 - "Jenkins"
 ---

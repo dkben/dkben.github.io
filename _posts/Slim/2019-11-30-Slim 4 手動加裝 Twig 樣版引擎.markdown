@@ -4,6 +4,7 @@ title:  "Slim 4 手動加裝 Twig 樣版引擎"
 subtitle: "Slim 也可以是 MVC"
 date:   2019-11-30 09:00:00 +0800
 categories: Slim
+meta_description: "Slim 4 手動加裝 Twig 樣版引擎，Slim 也可以是 MVC"
 tags:
 - "Slim"
 ---

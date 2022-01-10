@@ -4,6 +4,7 @@ title:  "Vue.js parse html string 在Vue.js中轉換HTML標籤"
 subtitle: "有一個屬性 isPay (值為字串 0, 1) 需要特別判斷"
 date:   2021-04-10 09:00:00 +0800
 categories: VueJs
+meta_description: "Vue.js parse html string 在Vue.js中轉換HTML標籤，有一個屬性 isPay (值為字串 0, 1) 需要特別判斷"
 tags:
 - "VueJs"
 ---

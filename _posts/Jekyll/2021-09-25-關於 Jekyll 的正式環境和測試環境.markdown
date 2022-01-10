@@ -4,6 +4,7 @@ title:  "關於 Jekyll 的正式環境和測試環境"
 subtitle: "不同環境使用不同設定檔"
 date:   2021-09-25 09:00:00 +0800
 categories: Jekyll
+meta_description: "關於 Jekyll 的正式環境和測試環境，不同環境使用不同設定檔"
 tags:
 - "Jekyll"
 ---

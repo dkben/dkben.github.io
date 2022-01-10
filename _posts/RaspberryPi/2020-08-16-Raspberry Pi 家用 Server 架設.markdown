@@ -4,6 +4,7 @@ title:  "Raspberry Pi 家用 Server 架設"
 subtitle: "Raspberry Pi 家用 Server 架設"
 date:   2020-08-16 09:00:00 +0800
 categories: RaspberryPi
+meta_description: "Raspberry Pi 家用 Server 架設，遇到比較大的麻煩是，因為CPU是ARM架構，所以不是每一個Docker Image都可以用，要花時間找一下並測試"
 tags:
 - "RaspberryPi"
 ---

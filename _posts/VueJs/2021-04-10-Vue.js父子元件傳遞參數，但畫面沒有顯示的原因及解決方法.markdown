@@ -4,6 +4,7 @@ title:  "Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解�
 subtitle: "當「顯示明細」選擇後，按下「查詢結果」按鈕"
 date:   2021-04-10 09:00:00 +0800
 categories: VueJs
+meta_description: "Vue.js父子元件傳遞參數，但畫面沒有顯示的原因及解決方法，當「顯示明細」選擇後，按下「查詢結果」按鈕"
 tags:
 - "VueJs"
 ---

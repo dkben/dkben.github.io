@@ -4,6 +4,7 @@ title:  "實作 List 生成器"
 subtitle: "使用 Symfony"
 date:   2021-01-28 09:00:00 +0800
 categories: Symfony
+meta_description: "使用 Symfony 實作 List 生成器"
 tags:
 - "Symfony"
 ---

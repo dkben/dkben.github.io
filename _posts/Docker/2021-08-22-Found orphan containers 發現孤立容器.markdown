@@ -4,6 +4,7 @@ title:  "Found orphan containers 發現孤立容器"
 subtitle: "這是發生在移除環境時的時候"
 date:   2021-08-22 09:00:00 +0800
 categories: Docker
+meta_description: "移除Docker專案環境時出現 Found orphan containers 發現孤立容器訊息的原因及處理方法"
 tags:
 - "Docker"
 ---

@@ -4,6 +4,7 @@ title:  "微軟WSL2中Ubuntu的家目錄，存放在Windows的位置"
 subtitle: "實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了"
 date:   2021-06-23 09:00:00 +0800
 categories: Windows
+meta_description: "微軟WSL2中Ubuntu的家目錄，存放在Windows的位置，實際測試微軟 WSL2 和 Ubuntu 和 Docker Desktop 的整合變的很方便了"
 tags:
 - "Windows"
 ---

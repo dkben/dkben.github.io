@@ -4,6 +4,7 @@ title:  "使用外部工具 ngrok 來遠端代表本機開發環境，取得 SSL
 subtitle: "開發工具"
 date:   2021-06-15 09:00:00 +0800
 categories: Tool
+meta_description: "使用外部工具 ngrok 來遠端代表本機開發環境，取得 SSL 域名效果"
 tags:
 - "Tool"
 ---

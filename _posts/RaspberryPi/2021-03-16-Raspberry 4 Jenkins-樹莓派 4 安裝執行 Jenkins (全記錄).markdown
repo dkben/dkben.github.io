@@ -4,6 +4,7 @@ title:  "Raspberry 4 Jenkins—樹莓派 4 安裝執行 Jenkins (全記錄)"
 subtitle: "記錄使用 Raspberry 4 來架設 Jenkins 服務"
 date:   2021-03-16 09:00:00 +0800
 categories: RaspberryPi
+meta_description: "Raspberry 4 Jenkins—樹莓派 4 安裝執行 Jenkins (全記錄)，記錄使用 Raspberry 4 來架設 Jenkins 服務"
 tags:
 - "RaspberryPi"
 ---

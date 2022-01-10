@@ -4,6 +4,7 @@ title:  "JS 函數、具名函式表示式 NFE (Named Function Expression)"
 subtitle: "Named Function Expression"
 date:   2020-01-05 09:00:00 +0800
 categories: JavaScript
+meta_description: "JS 函數、具名函式表示式 NFE (Named Function Expression)，在 JavaScript 中函數就是值，而每個值都有一個類型，簡言之函數就是物件"
 tags:
 - "JavaScript"
 ---

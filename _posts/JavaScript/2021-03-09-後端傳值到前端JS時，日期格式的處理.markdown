@@ -4,6 +4,7 @@ title:  "後端傳值到前端JS時，日期格式的處理"
 subtitle: "因為日期在後端是用 Datetime 格式儲存，而且 ORM 型別為 Datetime"
 date:   2021-03-09 09:00:00 +0800
 categories: JavaScript
+meta_description: "後端傳值到前端JS時，日期格式的處理，因為日期在後端是用 Datetime 格式儲存，而且 ORM 型別為 Datetime，所以使用字串截取的方式處理"
 tags:
 - "JavaScript"
 ---

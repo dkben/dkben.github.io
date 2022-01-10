@@ -4,6 +4,7 @@ title:  "Twig 和 VueJS 的傳值"
 subtitle: "如果不想要在進入 Vue 頁面後執行 API 取值的話，也可以把第一次的值傳到 Twig 樣版中，然後用 VueJS 讀取在 Twig 樣版中的值"
 date:   2021-03-10 09:00:00 +0800
 categories: VueJs
+meta_description: "Twig 和 VueJS 的傳值，如果不想要在進入 Vue 頁面後執行 API 取值的話，也可以把第一次的值傳到 Twig 樣版中，然後用 VueJS 讀取在 Twig 樣版中的值"
 tags:
 - "VueJs"
 ---

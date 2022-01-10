@@ -4,6 +4,7 @@ title:  "Symfony + Vue.js + Element UI 使用第三方的 Vue 元件"
 subtitle: "Element UI 是第三方的 Vue.js 元件，用來做一些特殊的 HTML 效果"
 date:   2021-03-11 09:00:00 +0800
 categories: Symfony VueJs
+meta_description: "Symfony + Vue.js + Element UI 使用第三方的 Vue 元件，Element UI 是第三方的 Vue.js 元件，用來做一些特殊的 HTML 效果"
 tags:
 - "Symfony"
 - "VueJs"

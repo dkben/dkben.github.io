@@ -4,6 +4,7 @@ title:  "Symfony整合Google登入的實作"
 subtitle: "Symfony整合Google登入的實作"
 date:   2021-04-06 09:00:00 +0800
 categories: Symfony
+meta_description: "Symfony整合Google登入的實作"
 tags:
 - "Symfony"
 ---

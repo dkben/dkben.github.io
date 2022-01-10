@@ -4,6 +4,7 @@ title:  "PhpStorm+Docker+PHP8+Xdebug3的設定方式"
 subtitle: "Configure Xdebug"
 date:   2021-07-11 09:00:00 +0800
 categories: Unclassified
+meta_description: "PhpStorm+Docker+PHP8+Xdebug3的設定方式"
 tags:
 - ""
 ---

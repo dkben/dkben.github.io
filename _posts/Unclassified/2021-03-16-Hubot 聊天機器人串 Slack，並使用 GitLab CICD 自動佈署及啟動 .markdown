@@ -4,6 +4,7 @@ title:  "Hubot 聊天機器人串 Slack，並使用 GitLab CICD 自動佈署及�
 subtitle: "Hubot, Slack, GitLab CICD"
 date:   2021-03-16 09:00:00 +0800
 categories: Unclassified
+meta_description: "Hubot 聊天機器人串 Slack，並使用 GitLab CICD 自動佈署及啟動"
 tags:
 - "Robot"
 ---

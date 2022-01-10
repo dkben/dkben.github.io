@@ -4,6 +4,7 @@ title:  "JS 的自執行函式 IIFE (Immediately Invoked Function Expression)"
 subtitle: "Immediately Invoked Function Expression"
 date:   2020-01-04 09:00:00 +0800
 categories: JavaScript
+meta_description: "自執行函式 Immediately Invoked Functions Expressions ( IIFE ) 是一個定義完馬上就執行的 JavaScript function"
 tags:
 - "JavaScript"
 ---

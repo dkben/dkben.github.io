@@ -4,6 +4,7 @@ title:  "使用 USB 透過 SSH 連線 Raspberry Pi Zero"
 subtitle: "按照以下文章重灌設定 Raspberry Pi 後，使用 USB 再透過 SSH 連線，但在 Windows 10 中一直失敗，無法連線"
 date:   2021-03-25 09:00:00 +0800
 categories: RaspberryPi
+meta_description: "使用 USB 透過 SSH 連線 Raspberry Pi Zero，按照以下文章重灌設定 Raspberry Pi 後，使用 USB 再透過 SSH 連線，但在 Windows 10 中一直失敗，無法連線"
 tags:
 - "RaspberryPi"
 ---

@@ -4,6 +4,7 @@ title:  "透過網站操作 TSC TTP-345 標籤機，按下按鈕後直接列印 
 subtitle: "印表機控制語言(Printer Language)"
 date:   2021-03-12 09:00:00 +0800
 categories: Unclassified
+meta_description: "透過網站操作 TSC TTP-345 標籤機，按下按鈕後直接列印 ( 不透過瀏覽器的列印工具 )"
 tags:
 - ""
 ---

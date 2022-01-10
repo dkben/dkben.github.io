@@ -4,6 +4,7 @@ title:  "JS 的 setTimeout 與 setInterval"
 subtitle: "setTimeout & setInterval"
 date:   2020-01-07 09:00:00 +0800
 categories: JavaScript
+meta_description: "JS 的 setTimeout 與 setInterval 範例"
 tags:
 - "JavaScript"
 ---

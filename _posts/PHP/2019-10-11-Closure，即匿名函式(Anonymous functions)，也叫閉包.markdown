@@ -4,6 +4,7 @@ title:  "Closure，即匿名函式（Anonymous functions），也叫閉包"
 subtitle: "PHP 基本"
 date:   2019-10-11 09:00:00 +0800
 categories: PHP
+meta_description: "PHP Closure，即匿名函式（Anonymous functions），也叫閉包"
 tags:
 - "PHP"
 ---

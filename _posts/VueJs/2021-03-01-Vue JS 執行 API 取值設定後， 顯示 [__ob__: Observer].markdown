@@ -4,6 +4,7 @@ title:  "Vue JS 執行 API 取值設定後， 顯示 [__ob__: Observer]"
 subtitle: "雖然有透過 API 取到值，後端的返回值看起來沒有問題"
 date:   2021-03-01 09:00:00 +0800
 categories: VueJs
+meta_description: "Vue JS 執行 API 取值設定後， 顯示 [__ob__: Observer]，雖然有透過 API 取到值，後端的返回值看起來沒有問題"
 tags:
 - "VueJs"
 ---

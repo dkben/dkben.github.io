@@ -4,6 +4,7 @@ title:  "手動關閉 PHP Built-in web server 內置伺服器 ( 方法也可以�
 subtitle: "PHP 基本"
 date:   2020-08-02 09:00:00 +0800
 categories: PHP
+meta_description: "手動關閉 PHP Built-in web server 內置伺服器 ( 方法也可以用來關閉其它程式 )"
 tags:
 - "PHP"
 - "Linux"

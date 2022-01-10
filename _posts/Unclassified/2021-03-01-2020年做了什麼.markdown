@@ -4,6 +4,7 @@ title:  "2020年做了什麼？"
 subtitle: "聽了一整年關於新創產業的 podcast 節目"
 date:   2021-03-01 09:00:00 +0800
 categories: Unclassified
+meta_description: "記錄2020年做了什麼"
 tags:
 - ""
 ---

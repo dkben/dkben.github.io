@@ -4,6 +4,7 @@ title:  "在windows10下寫自動更新程式腳本"
 subtitle: "在windows10下寫自動更新程式腳本"
 date:   2021-03-10 22:09:32 +0800
 categories: Windows
+meta_description: "在windows10下寫自動更新程式腳本"
 tags:
 - "Windows"
 ---

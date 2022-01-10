@@ -4,6 +4,7 @@ title:  "安裝 Jekyll 靜態網站生成器 ( Ruby ) 時所遭遇到的問題"
 subtitle: "按照官網安裝 Jekyll 靜態網站生成器 ( Ruby )"
 date:   2021-03-03 09:00:00 +0800
 categories: Unclassified
+meta_description: "安裝 Jekyll 靜態網站生成器 ( Ruby ) 時所遭遇到的問題，按照官網安裝 Jekyll 靜態網站生成器 ( Ruby )"
 tags:
 - ""
 ---

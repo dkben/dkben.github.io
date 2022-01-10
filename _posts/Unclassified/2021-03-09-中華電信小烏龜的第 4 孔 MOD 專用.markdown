@@ -4,6 +4,7 @@ title:  "中華電信小烏龜的第 4 孔 MOD 專用"
 subtitle: "原本有 2 台 raspberry pi，後來又買了 2 台，總共 4 台"
 date:   2021-03-09 09:00:00 +0800
 categories: Unclassified
+meta_description: "中華電信小烏龜的第 4 孔 MOD 專用"
 tags:
 - ""
 ---

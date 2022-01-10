@@ -5,6 +5,7 @@ serializing the object of…"
 subtitle: "A circular reference has been detected when serializing the object of class"
 date:   2021-03-01 09:00:00 +0800
 categories: Symfony
+meta_description: "Symfony 的 Serializer 序列化器，顯示A circular reference has been detected when"
 tags:
 - "Symfony"
 ---
