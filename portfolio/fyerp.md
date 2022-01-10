@@ -2,6 +2,7 @@
 layout: default
 title: 網路進銷存系統
 subtitle: "做為公司內部的進銷存管理工具"
+meta_description: "網路進銷存系統，做為公司內部的進銷存管理工具"
 ---
 
 <br>

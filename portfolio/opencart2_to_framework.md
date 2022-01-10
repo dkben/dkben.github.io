@@ -2,6 +2,7 @@
 layout: default
 title: OpenCart 2 改造成框架
 subtitle: "OpenCart 2 改造成框架"
+meta_description: "OpenCart 2 改造成框架，將 OpenCart2 改造成框架，讓工程師可以用比較現代的方式開發專案 "
 ---
 
 <br>

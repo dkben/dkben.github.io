@@ -2,6 +2,7 @@
 layout: default
 title: 台灣工商名錄
 subtitle: "提供您每月即時更新的工商資訊"
+meta_description: "台灣工商名錄，使用 SSG - Static Site Generators 靜態網站生成方式建立  "
 ---
 
 <br>

@@ -2,6 +2,7 @@
 layout: default
 title: 年菜預購網站
 subtitle: "年菜預購網站"
+meta_description: "人情網站，年菜預購網站，順便複習一下 Symfony"
 ---
 
 <br>

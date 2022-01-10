@@ -2,6 +2,7 @@
 layout: default
 title: SaaS服務-線上架站平台系統
 subtitle: "提供不會寫程式的設計師前後端系統，快速架設商業網站"
+meta_description: "SaaS服務-線上架站平台系統，提供不會寫程式的設計師前後端系統，快速架設商業網站"
 ---
 
 <br>

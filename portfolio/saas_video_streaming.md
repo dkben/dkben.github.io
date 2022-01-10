@@ -2,6 +2,7 @@
 layout: default
 title: SaaS服務-線上影音串流系統
 subtitle: "提供客戶付費儲值扣點觀看影片，經銷商上片拆帳系統"
+meta_description: "SaaS服務-線上影音串流系統，提供客戶付費儲值扣點觀看影片，經銷商上片拆帳系統"
 ---
 
 <br>

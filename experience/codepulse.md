@@ -2,6 +2,7 @@
 layout: default
 title: 電商專案開發經驗
 subtitle: "電商專案公司的框架開發及專案開發心得"
+meta_description: "電商專案公司的框架開發及專案開發心得"
 ---
 
 電商專案開發經驗

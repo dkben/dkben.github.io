@@ -2,6 +2,7 @@
 layout: default
 title: 農產品新創公司經驗
 subtitle: "開發經驗與心得"
+meta_description: "農產品新創公司經驗，開發經驗與心得"
 ---
 
 <br>

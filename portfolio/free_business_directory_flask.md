@@ -2,6 +2,7 @@
 layout: default
 title: 台灣工商名錄 Flask
 subtitle: "提供您每月即時更新的工商資訊"
+meta_description: "台灣工商名錄 Flask，使用 Python Flask 框架開發，並透過 Jenkins Pipeline 做建置佈署"
 ---
 
 <br>

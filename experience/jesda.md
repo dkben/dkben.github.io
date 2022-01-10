@@ -2,6 +2,7 @@
 layout: default
 title: 學校系統開發經驗
 subtitle: "開發經驗與心得"
+meta_description: "學校系統開發經驗"
 ---
 
 學校系統開發經驗
