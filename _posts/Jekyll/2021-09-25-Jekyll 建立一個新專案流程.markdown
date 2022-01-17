@@ -1,8 +1,10 @@
 ---
+sitemap:
+    priority: 0.7
 layout: post
 title:  "Jekyll 建立一個新專案流程"
 subtitle: "環境為 MacOS"
-date:   2021-09-25 09:00:00 +0800
+date: 2021-09-25 09:00:00 +0800
 categories: Jekyll
 meta_description: "環境為 MacOS 時，用 Jekyll 建立一個新專案的流程"
 tags:

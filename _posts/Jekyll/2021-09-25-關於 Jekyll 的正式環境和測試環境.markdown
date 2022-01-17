@@ -1,4 +1,6 @@
 ---
+sitemap:
+    priority: 0.7
 layout: post
 title:  "關於 Jekyll 的正式環境和測試環境"
 subtitle: "不同環境使用不同設定檔"
