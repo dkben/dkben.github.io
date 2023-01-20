@@ -1,6 +1,15 @@
 toc:
   - title: Portfolio / 作品集
     subfolderitems:
+      - name: SaaS服務-開發一頁式網站
+        link: /portfolio/one_page_system.html
+        target: _self
+      - name: 公務統計系統再造服務案
+        link: /portfolio/moi_gov.html
+        target: _self
+      - name: 多個Python爬蟲專案
+        link: /portfolio/python_crawler.html
+        target: _self
       - name: 台灣工商名錄-Flask版本
         link: /portfolio/free_business_directory_flask.html
         target: _self
