@@ -7,7 +7,7 @@ meta_description: "SaaS服務-開發一頁式網站"
 
 ## 從系統規劃、開發、美術排版、佈署都是一個人搞定
 
-![系統服務架構](/images/2023-01-20/001.jpeg){:width="800px"}
+![系統服務架構](/images/2023-01-20/001.jpeg)
 
 公司老闆想開發一個 SaaS 服務，透過這個服務提供一頁式網站，客戶只要申請即可快速開通。
 
@@ -23,17 +23,17 @@ meta_description: "SaaS服務-開發一頁式網站"
 
 ### 針對工作建立 Issue，並透過 GitLab 任務看板管理
 
-![](/images/2023-01-20/004.jpeg){:width="800px"}
+![](/images/2023-01-20/004.jpeg)
 
 ### 使用 GitLab CI/CD
 
-![](/images/2023-01-20/005.jpeg){:width="800px"}
+![](/images/2023-01-20/005.jpeg)
 
 ### 自動化佈署到 AWS
 
-![](/images/2023-01-20/006.jpeg){:width="800px"}
+![](/images/2023-01-20/006.jpeg)
 
-![](/images/2023-01-20/007.jpeg){:width="800px"}
+![](/images/2023-01-20/007.jpeg)
 
 ### 線上正式機 
 
